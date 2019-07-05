@@ -32,7 +32,7 @@ export const createInitialOpCodesGrid = () => {
   }
 
   for (let i = 0; i < 16; i++) {
-    const hexStringForIndex = i.toString(16);
+    const hexStringForIndex = i.toString(16).toUpperCase();
     // set first row to ['', 'x0', ... , 'xF']
     grid[0][i+1] = `x${hexStringForIndex}`;
     // set first column to ['', '0x', ... , 'Fx']
