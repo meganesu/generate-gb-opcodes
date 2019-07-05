@@ -1,0 +1,32 @@
+{
+  "name": "generate-gb-op-codes",
+  "version": "1.0.0",
+  "description": "Generates a complete set of Game Boy op codes and their corresponding CPU instructions",
+  "main": "main.js",
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganesu/generate-gb-op-codes.git"
+  },
+  "keywords": [
+    "gameboy",
+    "emulator",
+    "DMG-CPU",
+    "Sharp",
+    "LR35902"
+  ],
+  "author": "Megan Sullivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meganesu/generate-gb-op-codes/issues"
+  },
+  "homepage": "https://github.com/meganesu/generate-gb-op-codes#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0"
+  }
+}
