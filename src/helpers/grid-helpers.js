@@ -39,7 +39,6 @@ export const createInitialOpCodesGrid = () => {
     grid[i+1][0] = `${hexStringForIndex}x`;
   }
 
-  printGrid(grid);
   return grid;
 };
 
@@ -49,7 +48,8 @@ export const setCellForOpCode = (opCodeString, value, grid) => {
   const lsbValue = parseInt(opCodeString[1], 16);
   const row = msbValue + 1;
   const column = lsbValue + 1;
-  grid[msb+1][lsb+1] = value;
+  console.log('accessing:', row, column, 'for opcode', opCodeString);
+  grid[row][column] = value;
 }
 
 const printGrid = grid => {
