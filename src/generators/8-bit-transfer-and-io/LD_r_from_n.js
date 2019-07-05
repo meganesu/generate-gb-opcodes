@@ -29,8 +29,5 @@ export const generate_LD_r_from_n8 = () => {
     instructions.push(instruction);
   }
 
-  console.log(instructions);
   return instructions;
 }
-
-generate_LD_r_from_n8();
