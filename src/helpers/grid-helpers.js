@@ -61,7 +61,7 @@ const buildRowString = rowArray => {
   let stringToPrint = '';
   for (var i = 0; i < rowArray.length; i++) {
     const mnemonic = rowArray[i].mnemonic || rowArray[i] || '';
-    stringToPrint = stringToPrint.concat(mnemonic.padEnd(10, ' '));
+    stringToPrint = stringToPrint.concat(mnemonic.padEnd(12, ' '));
   }
   return stringToPrint;
 }
