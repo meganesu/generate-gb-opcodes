@@ -7,8 +7,6 @@ export const generate_LD_r_from_rPrime = () => {
 
   for (let r of Object.keys(registerBinaryCodes)) {
       for (let rPrime of Object.keys(registerBinaryCodes)) {
-          if (r === rPrime) continue;
-
           const instruction = {};
 
           instruction.mnemonic = `LD ${r}, ${rPrime}`; // LD A, B
