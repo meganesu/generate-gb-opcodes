@@ -1,11 +1,8 @@
 import instructionGenerators from './generators';
+import createInitialOpCodesGrid from './helpers/create-initial-op-codes-grid';
 
 // Set up:
-
-// opCodesGrid: [16][16]
-
-// set first row to ['', 'x0', ... , 'xF']
-// set first column to ['', '0x', ... , 'Fx']
+const opCodesGrid = createInitialOpCodesGrid(); // opCodesGrid: Array[17][17]
 
 // call each generator function
 const generateAllInstructions = () => {
@@ -19,7 +16,6 @@ const generateAllInstructions = () => {
 }
 
 const instructions = generateAllInstructions();
-console.log(instructions);
 
 // iterate over opcodes to place objects into opCodesGrid
 
