@@ -51,7 +51,7 @@ export const setCellForOpCode = (opCodeString, value, grid) => {
   grid[row][column] = value;
 }
 
-const printGrid = grid => {
+export const printGrid = grid => {
   for (var row = 0; row < grid.length; row++) {
     console.log(buildRowString(grid[row]));
   }
@@ -60,7 +60,8 @@ const printGrid = grid => {
 const buildRowString = rowArray => {
   let stringToPrint = '';
   for (var i = 0; i < rowArray.length; i++) {
-    stringToPrint = stringToPrint.concat(rowArray[i].padEnd(4, ' '));
+    const mnemonic = rowArray[i].mnemonic || rowArray[i] || '';
+    stringToPrint = stringToPrint.concat(mnemonic.padEnd(10, ' '));
   }
   return stringToPrint;
 }
