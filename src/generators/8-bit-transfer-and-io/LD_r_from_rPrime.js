@@ -1,14 +1,5 @@
 import { convertBinaryStringToHexString } from '../../helpers/convert-binary-string-to-hex-string';
-
-const registerBinaryCodes = {
-  A: '111',
-  B: '000',
-  C: '001',
-  D: '101',
-  E: '011',
-  H: '100',
-  L: '101'
-}
+import { registerBinaryCodes } from './constants';
 
 // LD r, r'
 export const generate_LD_r_from_rPrime = () => { 
