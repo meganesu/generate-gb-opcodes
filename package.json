@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "babel src --out-dir build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preexecute": "npm run build",
+    "execute": "node"
   },
   "repository": {
     "type": "git",
