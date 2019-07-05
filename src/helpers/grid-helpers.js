@@ -48,7 +48,6 @@ export const setCellForOpCode = (opCodeString, value, grid) => {
   const lsbValue = parseInt(opCodeString[1], 16);
   const row = msbValue + 1;
   const column = lsbValue + 1;
-  console.log('accessing:', row, column, 'for opcode', opCodeString);
   grid[row][column] = value;
 }
 
@@ -61,7 +60,6 @@ const printGrid = grid => {
 const buildRowString = rowArray => {
   let stringToPrint = '';
   for (var i = 0; i < rowArray.length; i++) {
-    //stringToPrint = stringToPrint.concat(rowArray[i] + '  ');
     stringToPrint = stringToPrint.concat(rowArray[i].padEnd(4, ' '));
   }
   return stringToPrint;
