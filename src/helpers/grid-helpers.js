@@ -22,9 +22,14 @@ fx
 */
 
 export const createInitialOpCodesGrid = () => {
-  const grid = new Array(17).fill(
-    new Array(17).fill('')
-  );
+  const grid = new Array(17);
+  
+  for (let i = 0; i < grid.length; i++) {
+    grid[i] = new Array(17);
+    for (let j = 0; j < grid[i].length; j++) {
+      grid[i][j] = '';
+    }
+  }
 
   for (let i = 0; i < 16; i++) {
     const hexStringForIndex = i.toString(16).toUpperCase();
