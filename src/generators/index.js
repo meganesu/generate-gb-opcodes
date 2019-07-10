@@ -10,6 +10,7 @@ import { generate_LD_memory_at_C_from_A } from './8-bit-transfer-and-io/LD_memor
 import { generate_LD_A_from_memory_at_a8 } from './8-bit-transfer-and-io/LD_A_from_memory_at_a8';
 import { generate_LD_memory_at_a8_from_A } from './8-bit-transfer-and-io/LD_memory_at_a8_from_A';
 import { generate_LD_A_from_memory_at_a16 } from './8-bit-transfer-and-io/LD_A_from_memory_at_a16';
+import { generate_LD_memory_at_a16_from_A } from './8-bit-transfer-and-io/LD_memory_at_a16_from_A';
 
 export default [
   generate_LD_r_from_rPrime,
@@ -23,5 +24,6 @@ export default [
   generate_LD_memory_at_C_from_A,
   generate_LD_A_from_memory_at_a8,
   generate_LD_memory_at_a8_from_A,
-  generate_LD_A_from_memory_at_a16
+  generate_LD_A_from_memory_at_a16,
+  generate_LD_memory_at_a16_from_A,
 ];
