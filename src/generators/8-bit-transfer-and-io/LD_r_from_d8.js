@@ -10,7 +10,7 @@ export const generate_LD_r_from_d8 = () => {
   for (let register of Object.keys(registerBinaryCodes)) {
     const instruction = {};
 
-    instruction.mnemonic = `LD ${register}, n8`;
+    instruction.mnemonic = `LD ${register}, d8`;
     instruction.flags = {};
     instruction.cycles = 2;
 
