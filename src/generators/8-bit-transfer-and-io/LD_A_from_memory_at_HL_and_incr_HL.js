@@ -1,6 +1,6 @@
 import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
 
-export const generate_LD_A_from_memory_at_HL_and_inc_HL = () => {
+export const generate_LD_A_from_memory_at_HL_and_incr_HL = () => {
   const instruction = {};
 
   instruction.mnemonic = "LD A, (HL+)";
