@@ -21,6 +21,7 @@ import { generate_LD_memory_at_HL_from_A_and_decr_HL } from './8-bit-transfer-an
 
 // 16-bit transfer instructions
 import { generate_LD_rr_from_d16 } from './16-bit-transfer/LD_rr_from_d16';
+import { generate_LD_SP_from_HL } from './16-bit-transfer/LD_SP_from_HL';
 
 export default [
   generate_LD_r_from_rPrime,
@@ -42,5 +43,6 @@ export default [
   generate_LD_memory_at_DE_from_A,
   generate_LD_memory_at_HL_from_A_and_incr_HL,
   generate_LD_memory_at_HL_from_A_and_decr_HL,
-  generate_LD_rr_from_d16
+  generate_LD_rr_from_d16,
+  generate_LD_SP_from_HL
 ];
