@@ -1,3 +1,4 @@
+// 8-bit transfer and I/O instructions
 import { generate_LD_r_from_rPrime } from './8-bit-transfer-and-io/LD_r_from_rPrime';
 import { generate_LD_r_from_d8 } from './8-bit-transfer-and-io/LD_r_from_d8';
 import { generate_LD_r_from_value_at_HL } from './8-bit-transfer-and-io/LD_r_from_value_at_HL';
@@ -18,6 +19,9 @@ import { generate_LD_memory_at_DE_from_A } from './8-bit-transfer-and-io/LD_memo
 import { generate_LD_memory_at_HL_from_A_and_incr_HL } from './8-bit-transfer-and-io/LD_memory_at_HL_from_A_and_incr_HL';
 import { generate_LD_memory_at_HL_from_A_and_decr_HL } from './8-bit-transfer-and-io/LD_memory_at_HL_from_A_and_decr_HL';
 
+// 16-bit transfer instructions
+import { generate_LD_rr_from_d16 } from './16-bit-transfer/LD_rr_from_d16';
+
 export default [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
@@ -37,5 +41,6 @@ export default [
   generate_LD_memory_at_BC_from_A,
   generate_LD_memory_at_DE_from_A,
   generate_LD_memory_at_HL_from_A_and_incr_HL,
-  generate_LD_memory_at_HL_from_A_and_decr_HL
+  generate_LD_memory_at_HL_from_A_and_decr_HL,
+  generate_LD_rr_from_d16
 ];
