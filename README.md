@@ -10,6 +10,7 @@ This is a bit of a side project that came out of my attempt to make a Game Boy e
 * `d16` - 16-bit immediate data value
 * `a8` - 8-bit immediate value specifying an address in the range 0xFF00 - 0xFFFF
 * `a16` - 16-bit immediate address value
+* `s8` - 8-bit signed immediate data value
 
 ## Credits
 
