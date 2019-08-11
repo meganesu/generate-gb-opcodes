@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/meganesu/generate-gb-op-codes#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
     "jest": "^24.8.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
