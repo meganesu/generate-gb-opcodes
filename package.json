@@ -2,11 +2,8 @@
   "name": "generate-gb-op-codes",
   "version": "1.0.0",
   "description": "Generates a complete set of Game Boy op codes and their corresponding CPU instructions",
-  "main": "main.js",
   "scripts": {
-    "build": "babel src --out-dir build",
-    "preexecute": "npm run build",
-    "execute": "node"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -26,8 +23,7 @@
   },
   "homepage": "https://github.com/meganesu/generate-gb-op-codes#readme",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5"
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }
