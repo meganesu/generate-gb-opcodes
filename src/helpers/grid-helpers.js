@@ -56,9 +56,13 @@ export const setCellForOpCode = (opCodeString, value, grid) => {
 }
 
 export const printGrid = grid => {
+  let stringToPrint = '';
   for (var row = 0; row < grid.length; row++) {
-    console.log(buildRowString(grid[row]));
+    stringToPrint = stringToPrint.concat(buildRowString(grid[row]).replace(/ /g, '&nbsp;'), '<br />');
   }
+
+  const divElement = document.getElementById('op-code-table');
+  divElement.innerHTML = stringToPrint;
 }
 
 const buildRowString = rowArray => {
