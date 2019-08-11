@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Generates a complete set of Game Boy op codes and their corresponding CPU instructions",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/meganesu/generate-gb-op-codes#readme",
   "devDependencies": {
+    "jest": "^24.8.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   }
