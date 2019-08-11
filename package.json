@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Generates a complete set of Game Boy op codes and their corresponding CPU instructions",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.js",
+    "build-dev": "webpack --config webpack.dev.js",
     "test": "jest"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "@babel/preset-env": "^7.5.5",
     "jest": "^24.8.0",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.1"
   }
 }
