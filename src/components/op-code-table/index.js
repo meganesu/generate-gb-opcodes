@@ -1,4 +1,3 @@
-import React from 'react';
 import instructionGenerators from '../../generators';
 import { createInitialOpCodesGrid, setCellForOpCode, buildGridString } from '../../helpers/grid-helpers';
 
