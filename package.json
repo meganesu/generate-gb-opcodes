@@ -26,9 +26,15 @@
   "homepage": "https://github.com/meganesu/generate-gb-op-codes#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "jest": "^24.8.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }

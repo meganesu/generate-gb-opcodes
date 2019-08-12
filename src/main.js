@@ -1,5 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import instructionGenerators from './generators';
-import { createInitialOpCodesGrid, setCellForOpCode, printGrid } from './helpers/grid-helpers';
+import { createInitialOpCodesGrid, setCellForOpCode, buildGridString } from './helpers/grid-helpers';
 
 // Set up:
 const opCodesGrid = createInitialOpCodesGrid(); // opCodesGrid: Array[17][17]
@@ -22,6 +24,11 @@ instructions.forEach(instruction => {
   setCellForOpCode(instruction.opCode, instruction, opCodesGrid);
 });
 
-printGrid(opCodesGrid);
-
+const App = ({text}) => (
+  <div id="op-code-table" dangerouslySetInnerHTML={{__html: text}} />
+)
 // use opCodesGrid to generate an HTML table
+ReactDOM.render(
+  <App text={buildGridString(opCodesGrid)} />,
+  document.getElementById('container')
+);
