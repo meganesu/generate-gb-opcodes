@@ -54,21 +54,3 @@ export const setCellForOpCode = (opCodeString, value, grid) => {
   }
   grid[row][column] = value;
 }
-
-export const buildGridString = grid => {
-  let stringToPrint = '';
-  for (var row = 0; row < grid.length; row++) {
-    stringToPrint = stringToPrint.concat(buildRowString(grid[row]).replace(/ /g, '&nbsp;'), '<br />');
-  }
-
-  return stringToPrint;
-}
-
-const buildRowString = rowArray => {
-  let stringToPrint = '';
-  for (var i = 0; i < rowArray.length; i++) {
-    const mnemonic = rowArray[i].mnemonic || rowArray[i] || '';
-    stringToPrint = stringToPrint.concat(mnemonic.padEnd(14, ' '));
-  }
-  return stringToPrint;
-}

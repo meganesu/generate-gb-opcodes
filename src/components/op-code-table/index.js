@@ -1,5 +1,5 @@
 import instructionGenerators from '../../generators';
-import { createInitialOpCodesGrid, setCellForOpCode, buildGridString } from '../../helpers/grid-helpers';
+import { createInitialOpCodesGrid, setCellForOpCode } from '../../helpers/grid-helpers';
 
 // Set up:
 const opCodesGrid = createInitialOpCodesGrid(); // opCodesGrid: Array[17][17]
@@ -22,12 +22,27 @@ instructions.forEach(instruction => {
   setCellForOpCode(instruction.opCode, instruction, opCodesGrid);
 });
 
-const OpCodeTable = () => {
-  const text = buildGridString(opCodesGrid);
-
-  return (
-    <table id="op-code-table" dangerouslySetInnerHTML={{__html: text}}></table>
-  );
-};
+const OpCodeTable = () => (
+  <table id="op-code-table">
+    <caption>Game Boy CPU instructions, organized by op code</caption>
+    <tbody>
+    {
+      opCodesGrid.map(gridRow => (
+        <tr>
+          {
+            gridRow.map(gridCell => (
+              <td>
+              {
+                gridCell.mnemonic ? gridCell.mnemonic : gridCell
+              }
+              </td>
+            ))
+          }
+        </tr>
+      ))
+    }
+    </tbody>
+  </table>
+);
 
 export default OpCodeTable;
