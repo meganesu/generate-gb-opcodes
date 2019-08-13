@@ -26,7 +26,7 @@ const OpCodeTable = () => {
   const text = buildGridString(opCodesGrid);
 
   return (
-    <div id="op-code-table" dangerouslySetInnerHTML={{__html: text}} />
+    <table id="op-code-table" dangerouslySetInnerHTML={{__html: text}}></table>
   );
 };
 

@@ -2,8 +2,12 @@ import OpCodeTable from '.';
 import { mount } from 'enzyme';
 
 describe('OpCodeTable', () => {
+  const component = mount(<OpCodeTable />);
+
   it('mounts', () => {
-    const component = mount(<OpCodeTable />);
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
+  it('contains an HTML table', () => {
+    expect(component.find('table')).toHaveLength(1);
+  })
 });
