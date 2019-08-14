@@ -40,6 +40,7 @@ const OpCodeTable = () => (
             <th scope="row" key={index.toString()}>{`${index.toString(16).toUpperCase()}x`}</th>
             {
               gridRow.map(gridCell => (
+                // TODO: Add unique key for these td cells. Should probably be based on coordinates of the cell.
                 <td className="instruction">
                 {
                   gridCell.mnemonic ? gridCell.mnemonic : gridCell
