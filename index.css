@@ -2,6 +2,10 @@
   border-collapse: collapse;
 }
 
+#op-code-table th {
+  border: 1px solid black;
+}
+
 #op-code-table td {
   border: 1px solid black;
 }

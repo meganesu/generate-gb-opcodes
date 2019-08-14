@@ -26,21 +26,30 @@ const OpCodeTable = () => (
   <table id="op-code-table">
     <caption>Game Boy CPU instructions, organized by op code</caption>
     <tbody>
-    {
-      opCodesGrid.map(gridRow => (
-        <tr>
-          {
-            gridRow.map(gridCell => (
-              <td>
-              {
-                gridCell.mnemonic ? gridCell.mnemonic : gridCell
-              }
-              </td>
-            ))
-          }
-        </tr>
-      ))
-    }
+      <tr>
+        <td></td>
+        {
+          Array(16).fill('').map((value, index) => (
+            <th scope="col" key={index.toString()}>{`x${index.toString(16).toUpperCase()}`}</th>
+          ))
+        }
+      </tr>
+      {
+        opCodesGrid.map((gridRow, index) => (
+          <tr>
+            <th scope="row" key={index.toString()}>{`${index.toString(16).toUpperCase()}x`}</th>
+            {
+              gridRow.map(gridCell => (
+                <td className="instruction" key={gridCell.opCode ? gridCell.opCode.toString() : 'empty'}>
+                {
+                  gridCell.mnemonic ? gridCell.mnemonic : gridCell
+                }
+                </td>
+              ))
+            }
+          </tr>
+        ))
+      }
     </tbody>
   </table>
 );

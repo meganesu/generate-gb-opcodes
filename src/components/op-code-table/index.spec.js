@@ -11,6 +11,6 @@ describe('OpCodeTable', () => {
     expect(component.find('table')).toHaveLength(1);
   });
   it('renders the right number of cells in the table', () => {
-    expect(component.find('td')).toHaveLength(17*17);
+    expect(component.find('td.instruction')).toHaveLength(16*16);
   })
 });

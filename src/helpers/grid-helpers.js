@@ -22,21 +22,13 @@ fx
 */
 
 export const createInitialOpCodesGrid = () => {
-  const grid = new Array(17);
+  const grid = new Array(16);
   
   for (let i = 0; i < grid.length; i++) {
-    grid[i] = new Array(17);
+    grid[i] = new Array(16);
     for (let j = 0; j < grid[i].length; j++) {
       grid[i][j] = '';
     }
-  }
-
-  for (let i = 0; i < 16; i++) {
-    const hexStringForIndex = i.toString(16).toUpperCase();
-    // set first row to ['', 'x0', ... , 'xF']
-    grid[0][i+1] = `x${hexStringForIndex}`;
-    // set first column to ['', '0x', ... , 'Fx']
-    grid[i+1][0] = `${hexStringForIndex}x`;
   }
 
   return grid;
@@ -46,9 +38,11 @@ export const createInitialOpCodesGrid = () => {
 export const setCellForOpCode = (opCodeString, value, grid) => {
   const msbValue = parseInt(opCodeString[0], 16);
   const lsbValue = parseInt(opCodeString[1], 16);
-  const row = msbValue + 1;
-  const column = lsbValue + 1;
-  if (grid[row][column]) {
+
+  const row = msbValue;
+  const column = lsbValue;
+
+  if (grid[msbValue][lsbValue]) {
     console.log("ERROR: Tried to set cell for", opCodeString, "but instruction for that op code already exists!");
     console.log("Tried to write", value, "over existing value", grid[row][column]);
   }
