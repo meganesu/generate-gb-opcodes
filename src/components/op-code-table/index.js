@@ -40,7 +40,7 @@ const OpCodeTable = () => (
             <th scope="row" key={index.toString()}>{`${index.toString(16).toUpperCase()}x`}</th>
             {
               gridRow.map(gridCell => (
-                <td className="instruction" key={gridCell.opCode ? gridCell.opCode.toString() : 'empty'}>
+                <td className="instruction">
                 {
                   gridCell.mnemonic ? gridCell.mnemonic : gridCell
                 }
