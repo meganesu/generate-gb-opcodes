@@ -43,8 +43,9 @@ export const setCellForOpCode = (opCodeString, value, grid) => {
   const column = lsbValue;
 
   if (grid[msbValue][lsbValue]) {
-    console.log("ERROR: Tried to set cell for", opCodeString, "but instruction for that op code already exists!");
-    console.log("Tried to write", value, "over existing value", grid[row][column]);
+    console.error("ERROR: Tried to set cell for", opCodeString, "but instruction for that op code already exists!");
+    console.error("Tried to write", value, "over existing value", grid[row][column]);
+    return;
   }
   grid[row][column] = value;
 }
