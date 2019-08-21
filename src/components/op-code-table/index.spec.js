@@ -2,7 +2,11 @@ import OpCodeTable from '.';
 import { mount } from 'enzyme';
 
 describe('OpCodeTable', () => {
-  const component = mount(<OpCodeTable />);
+  let component;
+
+  beforeAll(() => {
+    component = mount(<OpCodeTable />);
+  });
 
   it('mounts', () => {
     expect(component).toBeDefined();
@@ -12,5 +16,5 @@ describe('OpCodeTable', () => {
   });
   it('renders the right number of cells in the table', () => {
     expect(component.find('td.instruction')).toHaveLength(16*16);
-  })
+  });
 });

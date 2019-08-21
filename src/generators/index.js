@@ -26,7 +26,7 @@ import { generate_PUSH_rr } from './16-bit-transfer/PUSH_rr';
 import { generate_POP_rr } from './16-bit-transfer/POP_rr';
 import { generate_HL_from_SP_plus_s8 } from './16-bit-transfer/LD_HL_from_SP_plus_s8';
 
-export default [
+export const instructionGenerators = [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
   generate_LD_r_from_value_at_HL,
@@ -52,3 +52,14 @@ export default [
   generate_POP_rr,
   generate_HL_from_SP_plus_s8
 ];
+
+// call each generator function
+export const generateAllInstructions = () => {
+  let instructions = [];
+
+  for (let generatorFunction of instructionGenerators) {
+    instructions = instructions.concat(generatorFunction());
+  }
+  
+  return instructions; // list containing all instruction objects
+};
