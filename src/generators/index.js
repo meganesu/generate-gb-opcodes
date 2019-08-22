@@ -27,6 +27,9 @@ import { generate_POP_rr } from './16-bit-transfer/POP_rr';
 import { generate_HL_from_SP_plus_s8 } from './16-bit-transfer/LD_HL_from_SP_plus_s8';
 import { generate_LD_memory_at_a16_from_SP } from './16-bit-transfer/LD_memory_at_a16_from_SP';
 
+// 8-bit arithmetic and logical operation instructions
+import { generate_ADD_A_r8 } from './8-bit-arithmetic-and-logical-operation/ADD_A_r8';
+
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
@@ -52,7 +55,8 @@ export const instructionGenerators = [
   generate_PUSH_rr,
   generate_POP_rr,
   generate_HL_from_SP_plus_s8,
-  generate_LD_memory_at_a16_from_SP
+  generate_LD_memory_at_a16_from_SP,
+  generate_ADD_A_r8
 ];
 
 // call each generator function
