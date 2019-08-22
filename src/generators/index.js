@@ -25,6 +25,7 @@ import { generate_LD_SP_from_HL } from './16-bit-transfer/LD_SP_from_HL';
 import { generate_PUSH_rr } from './16-bit-transfer/PUSH_rr';
 import { generate_POP_rr } from './16-bit-transfer/POP_rr';
 import { generate_HL_from_SP_plus_s8 } from './16-bit-transfer/LD_HL_from_SP_plus_s8';
+import { generate_LD_memory_at_a16_from_SP } from './16-bit-transfer/LD_memory_at_a16_from_SP';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -50,7 +51,8 @@ export const instructionGenerators = [
   generate_LD_SP_from_HL,
   generate_PUSH_rr,
   generate_POP_rr,
-  generate_HL_from_SP_plus_s8
+  generate_HL_from_SP_plus_s8,
+  generate_LD_memory_at_a16_from_SP
 ];
 
 // call each generator function
