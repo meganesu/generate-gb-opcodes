@@ -4,3 +4,11 @@ node_js: "10"
 script:
   - npm test
   - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
