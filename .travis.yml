@@ -4,7 +4,6 @@ node_js: "10"
 script:
   - npm test
   - npm run build
-  - cp index.html index.css dist
 
 deploy:
   provider: pages
