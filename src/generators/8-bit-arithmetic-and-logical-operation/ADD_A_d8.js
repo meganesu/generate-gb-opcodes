@@ -1,6 +1,6 @@
 import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
 
-const generate_ADD_A_d8 = () => {
+export const generate_ADD_A_d8 = () => {
   const instruction = {};
 
   instruction.mnemonic = 'ADD A, d8';
