@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import OpCodeTable from './components/op-code-table';
 
-const App = ({text}) => (
+const App = () => (
   <OpCodeTable />
 );
 
