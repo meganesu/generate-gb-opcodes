@@ -1,5 +1,6 @@
 #op-code-table {
   border-collapse: collapse;
+  background-color: #9F9F9F;
 }
 
 #op-code-table th {
@@ -8,6 +9,10 @@
 
 #op-code-table td {
   border: 1px solid black;
+}
+
+.instruction {
+  background-color: #BFBFBF;
 }
 
 .eight-bit-transfer-and-io {
