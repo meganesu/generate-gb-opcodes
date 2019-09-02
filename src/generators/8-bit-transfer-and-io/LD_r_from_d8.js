@@ -1,5 +1,6 @@
 import { convertBinaryStringToHexString } from '../../helpers/convert-binary-string-to-hex-string';
 import { registerBinaryCodes } from './constants';
+import { instructionTypes } from '../constants';
 
 // LD r, n
 export const generate_LD_r_from_d8 = () => {
@@ -11,6 +12,7 @@ export const generate_LD_r_from_d8 = () => {
     const instruction = {};
 
     instruction.mnemonic = `LD ${register}, d8`;
+    instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
     instruction.flags = {};
     instruction.cycles = 2;
 

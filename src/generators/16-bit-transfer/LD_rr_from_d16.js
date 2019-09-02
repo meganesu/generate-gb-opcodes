@@ -1,4 +1,5 @@
 import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
+import { instructionTypes } from '../constants';
 
 const registerPairBinaryCodes = {
   "BC": "00",
@@ -14,6 +15,7 @@ export const generate_LD_rr_from_d16 = () => {
     const instruction = {};
 
     instruction.mnemonic = `LD ${register}, d16`;
+    instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
     instruction.flags = {};
     instruction.cycles = 3;
 

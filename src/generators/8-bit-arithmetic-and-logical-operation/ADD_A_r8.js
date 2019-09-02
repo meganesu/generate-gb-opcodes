@@ -1,4 +1,5 @@
 import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
+import { instructionTypes } from '../constants';
 
 const registerBinaryCodes = {
   A: '111',
@@ -17,6 +18,7 @@ export const generate_ADD_A_r8 = () => {
     const instruction = {};
 
     instruction.mnemonic = `ADD A, ${register}`;
+    instruction.type = instructionTypes.EIGHT_BIT_ARITHMETIC_AND_LOGICAL_OPERATION;
     instruction.flags = {
       CY: '8-bit',
       H: '8-bit',

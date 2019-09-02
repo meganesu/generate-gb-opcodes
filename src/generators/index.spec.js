@@ -1,4 +1,5 @@
 import { instructionGenerators, generateAllInstructions } from '.';
+import { instructionTypes } from './constants';
 
 describe('instructionGenerators', () => {
   it('contains an array of functions', () => {
@@ -26,8 +27,11 @@ describe('generateAllInstructions', () => {
   });
 
   it('builds each instruction object with the correct structure', () => {
+    const instructionTypeValues = Object.values(instructionTypes);
+
     instructions.forEach(instruction => {
       expect(typeof instruction.mnemonic).toBe('string');
+      expect(instructionTypeValues).toContain(instruction.type);
       expect(instruction.flags).toBeInstanceOf(Object);
       expect(instruction.cycles).toBeGreaterThan(0);
       expect(instruction.opCode).toMatch(new RegExp('^[A-F\\d]*$', 'g'));

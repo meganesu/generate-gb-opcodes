@@ -1,9 +1,11 @@
 import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
+import { instructionTypes } from '../constants';
 
 export const generate_ADD_A_d8 = () => {
   const instruction = {};
 
   instruction.mnemonic = 'ADD A, d8';
+  instruction.type = instructionTypes.EIGHT_BIT_ARITHMETIC_AND_LOGICAL_OPERATION;
   instruction.flags = {
     CY: '8-bit',
     H: '8-bit',
