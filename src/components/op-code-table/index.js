@@ -29,7 +29,7 @@ const OpCodeTable = () => (
             {
               gridRow.map(gridCell => (
                 // TODO: Add unique key for these td cells. Should probably be based on coordinates of the cell.
-                <td className="instruction">
+                <td className={`instruction ${gridCell.type}`}>
                 {
                   gridCell.mnemonic ? gridCell.mnemonic : gridCell
                 }
