@@ -9,3 +9,15 @@
 #op-code-table td {
   border: 1px solid black;
 }
+
+.eight-bit-transfer-and-io {
+  background-color: #CCCCFF;
+}
+
+.eight-bit-arithmetic-and-logical-operation {
+  background-color: #FFFF99;
+}
+
+.sixteen-bit-transfer {
+  background-color: #CCFFCC;
+}
