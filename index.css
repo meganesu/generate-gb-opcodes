@@ -19,10 +19,34 @@
   background-color: #CCCCFF;
 }
 
+.sixteen-bit-transfer {
+  background-color: #CCFFCC;
+}
+
 .eight-bit-arithmetic-and-logical-operation {
   background-color: #FFFF99;
 }
 
-.sixteen-bit-transfer {
-  background-color: #CCFFCC;
+.sixteen-bit-arithmetic-operation {
+  background-color: #FFCCCC
+}
+
+.rotate-shift {
+  background-color: #80FFFF;
+}
+
+.bit-operation {
+  background-color: #80FFFF;
+}
+
+.jump {
+  background-color: #FFCC99;
+}
+
+.call-and-return {
+  background-color: #FFCC99;
+}
+
+.general-purpose-arithmetic-operations-and-cpu-control {
+  background-color: #FF99CC;
 }
