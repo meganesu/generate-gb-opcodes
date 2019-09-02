@@ -30,7 +30,7 @@ import { generate_LD_memory_at_a16_from_SP } from './16-bit-transfer/LD_memory_a
 // 8-bit arithmetic and logical operation instructions
 import { generate_ADD_A_r8 } from './8-bit-arithmetic-and-logical-operation/ADD_A_r8';
 import { generate_ADD_A_d8 } from './8-bit-arithmetic-and-logical-operation/ADD_A_d8';
-import { generate_ADD_A_memory_at_HL } from './8-bit-arithmetic-and-logical-operation';
+import { generate_ADD_A_memory_at_HL } from './8-bit-arithmetic-and-logical-operation/ADD_A_memory_at_HL';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
