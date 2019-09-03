@@ -21,7 +21,6 @@ export const generate_SUB_r8 = () => {
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
     instructions.push(instruction);
-    console.log(instruction);
   }
 
   return instructions;
