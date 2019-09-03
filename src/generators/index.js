@@ -18,6 +18,7 @@ import { generate_LD_memory_at_BC_from_A } from './8-bit-transfer-and-io/LD_memo
 import { generate_LD_memory_at_DE_from_A } from './8-bit-transfer-and-io/LD_memory_at_DE_from_A';
 import { generate_LD_memory_at_HL_from_A_and_incr_HL } from './8-bit-transfer-and-io/LD_memory_at_HL_from_A_and_incr_HL';
 import { generate_LD_memory_at_HL_from_A_and_decr_HL } from './8-bit-transfer-and-io/LD_memory_at_HL_from_A_and_decr_HL';
+import { generate_ADC_A_memory_at_HL } from './8-bit-arithmetic-and-logical-operation/ADC_A_memory_at_HL';
 
 // 16-bit transfer instructions
 import { generate_LD_rr_from_d16 } from './16-bit-transfer/LD_rr_from_d16';
@@ -64,7 +65,8 @@ export const instructionGenerators = [
   generate_ADD_A_d8,
   generate_ADD_A_memory_at_HL,
   generate_ADC_A_r8,
-  generate_ADC_A_d8
+  generate_ADC_A_d8,
+  generate_ADC_A_memory_at_HL
 ];
 
 // call each generator function
