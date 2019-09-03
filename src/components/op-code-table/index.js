@@ -18,18 +18,20 @@ const OpCodeTable = () => (
         <td></td>
         {
           Array(16).fill('').map((value, index) => (
-            <th scope="col" key={index.toString()}>{`x${index.toString(16).toUpperCase()}`}</th>
+            <th scope="col" key={`x${index.toString()}`}>{`x${index.toString(16).toUpperCase()}`}</th>
           ))
         }
       </tr>
       {
-        opCodesGrid.map((gridRow, index) => (
-          <tr>
-            <th scope="row" key={index.toString()}>{`${index.toString(16).toUpperCase()}x`}</th>
+        opCodesGrid.map((gridRow, rowIndex) => (
+          <tr key={`${rowIndex.toString(16)}x`}>
+            <th scope="row">{`${rowIndex.toString(16).toUpperCase()}x`}</th>
             {
-              gridRow.map(gridCell => (
-                // TODO: Add unique key for these td cells. Should probably be based on coordinates of the cell.
-                <td className={`instruction ${gridCell.type}`}>
+              gridRow.map((gridCell, columnIndex) => (
+                <td
+                  key={`${rowIndex}${columnIndex}`}
+                  className={`instruction ${gridCell.type}`}
+                >
                 {
                   gridCell.mnemonic ? gridCell.mnemonic : gridCell
                 }
