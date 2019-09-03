@@ -4,7 +4,7 @@ import { convertBinaryStringToHexString } from '../../helpers/convert-binary-str
 export const generate_ADC_A_r8 = () => {
   const instructions = [];
 
-  for (let register in Object.keys(registerBinaryCodes)) {
+  for (let register of Object.keys(registerBinaryCodes)) {
     const instruction = {};
 
     instruction.mnemonic = `ADC A, ${register}`;
