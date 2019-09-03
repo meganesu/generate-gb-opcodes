@@ -1,6 +1,5 @@
 import { convertBinaryStringToHexString } from '../../helpers/convert-binary-string-to-hex-string';
-import { registerBinaryCodes } from './constants';
-import { instructionTypes } from '../constants';
+import { instructionTypes, registerBinaryCodes } from '../constants';
 
 export const generate_LD_r_from_value_at_HL = () => {
   const instructions = [];
