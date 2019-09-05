@@ -1,7 +1,7 @@
 import { instructionTypes } from '../constants';
 import { convertBinaryStringToHexString } from '../../helpers/convert-binary-string-to-hex-string';
 
-const generate_OR_memory_at_HL = () => {
+export const generate_OR_memory_at_HL = () => {
   const instruction = {};
 
   instruction.mnemonic = 'OR (HL)';
