@@ -42,6 +42,7 @@ import { generate_SBC_A_d8 } from './8-bit-arithmetic-and-logical-operation/SBC_
 import { generate_SBC_A_memory_at_HL } from './8-bit-arithmetic-and-logical-operation/SBC_A_memory_at_HL';
 import { generate_AND_r8 } from './8-bit-arithmetic-and-logical-operation/AND_r8';
 import { generate_AND_d8 } from './8-bit-arithmetic-and-logical-operation/AND_d8';
+import { generate_AND_memory_at_HL } from './8-bit-arithmetic-and-logical-operation/AND_memory_at_HL';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -82,7 +83,8 @@ export const instructionGenerators = [
   generate_SBC_A_d8,
   generate_SBC_A_memory_at_HL,
   generate_AND_r8,
-  generate_AND_d8
+  generate_AND_d8,
+  generate_AND_memory_at_HL
 ];
 
 // call each generator function
