@@ -54,6 +54,7 @@ import { generate_CP_d8 } from './8-bit-arithmetic-and-logical-operation/CP_d8';
 import { generate_CP_memory_at_HL } from './8-bit-arithmetic-and-logical-operation/CP_memory_at_HL';
 import { generate_INC_r8 } from './8-bit-arithmetic-and-logical-operation/INC_r8';
 import { generate_INC_memory_at_HL } from './8-bit-arithmetic-and-logical-operation/INC_memory_at_HL';
+import { generate_DEC_r8 } from './8-bit-arithmetic-and-logical-operation/DEC_r8';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -106,7 +107,8 @@ export const instructionGenerators = [
   generate_CP_d8,
   generate_CP_memory_at_HL,
   generate_INC_r8,
-  generate_INC_memory_at_HL
+  generate_INC_memory_at_HL,
+  generate_DEC_r8
 ];
 
 // call each generator function
