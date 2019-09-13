@@ -31,7 +31,7 @@ describe('generateAllInstructions', () => {
 
     instructions.forEach(instruction => {
       expect(typeof instruction.mnemonic).toBe('string');
-      expect(instructionTypeValues).toContain(instruction.type);
+      expect(instructionTypeValues.includes(instruction.type)).toBe(true);
       expect(instruction.flags).toBeInstanceOf(Object);
       expect(instruction.cycles).toBeGreaterThan(0);
       expect(instruction.opCode).toMatch(new RegExp('^[A-F\\d]*$', 'g'));
