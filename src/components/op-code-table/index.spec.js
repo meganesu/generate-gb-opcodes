@@ -3,9 +3,18 @@ import { mount } from 'enzyme';
 
 describe('OpCodeTable', () => {
   let component;
+  let grid;
 
   beforeAll(() => {
-    component = mount(<OpCodeTable />);
+    grid = new Array(16);
+    for (let i = 0; i < grid.length; i++) {
+      grid[i] = new Array(16);
+      for (let j = 0; j < grid[i].length; j++) {
+        grid[i][j] = '';
+      }
+    }
+
+    component = mount(<OpCodeTable opCodesGrid={grid} />);
   });
 
   it('mounts', () => {

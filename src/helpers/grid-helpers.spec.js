@@ -16,21 +16,39 @@ describe('Grid helpers', () => {
   });
 
   describe('setCellForOpCode', () => {
-    let grid;
+    let grids;
     beforeEach(() => {
-      grid = createInitialOpCodesGrid();
+      grids = [];
+      grids.push(createInitialOpCodesGrid());
+      grids.push(createInitialOpCodesGrid());
     });
 
-    it('sets the correct cell in the grid based on the op code passed in', () => {
-      const instruction = {
-        opCode: '8A',
-        mnemonic: 'fake',
-        flags: {},
-        cycles: 1,
-      }
-      setCellForOpCode(instruction.opCode, instruction, grid);
+    describe('when an 8-bit op code is passed in', () => {
+      it('sets the correct cell in the first grid based on the op code value', () => {
+        const instruction = {
+          opCode: '8A',
+          mnemonic: 'fake',
+          flags: {},
+          cycles: 1,
+        }
+        setCellForOpCode(instruction.opCode, instruction, grids);
+  
+        expect(grids[0][8][10]).toEqual(instruction);
+      });
+    });
 
-      expect(grid[8][10]).toEqual(instruction);
+    describe('when a 16-bit op code starting with 0xCB is passed in', () => {
+      it('sets the correct cell in the second grid based on the op code value', () => {
+        const instruction = {
+          opCode: 'CB8A',
+          mnemonic: 'fake',
+          flags: {},
+          cycles: 1,
+        }
+        setCellForOpCode(instruction.opCode, instruction, grids);
+  
+        expect(grids[1][8][10]).toEqual(instruction);
+      });
     });
 
     describe('when trying to overwrite a cell with existing contents', () => {
@@ -44,8 +62,8 @@ describe('Grid helpers', () => {
 
       beforeEach(() => {
         consoleSpy = jest.spyOn(console, "error").mockImplementation();
-        setCellForOpCode(instruction.opCode, instruction, grid);
-        setCellForOpCode(instruction.opCode, {}, grid);
+        setCellForOpCode(instruction.opCode, instruction, grids);
+        setCellForOpCode(instruction.opCode, {}, grids);
       });
 
       afterEach(() => {
@@ -53,7 +71,7 @@ describe('Grid helpers', () => {
       });
 
       it('does not replace the existing contents of the cell', () => {
-        expect(grid[8][10]).toEqual(instruction);
+        expect(grids[0][8][10]).toEqual(instruction);
       });
 
       it('outputs an error message', () => {

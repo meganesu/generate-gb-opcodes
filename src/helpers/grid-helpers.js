@@ -35,17 +35,25 @@ export const createInitialOpCodesGrid = () => {
 };
 
 // Set grid cell for op code `${msb}${lsb}` to value
-export const setCellForOpCode = (opCodeString, value, grid) => {
-  const msbValue = parseInt(opCodeString[0], 16);
-  const lsbValue = parseInt(opCodeString[1], 16);
+export const setCellForOpCode = (opCodeString, value, grids) => {
+  let indexOfGridToUpdate = 0;
+  let opCodeStringToPlaceInGrid = opCodeString;
+  // if opCodeString is 2 characters long
+  if (opCodeString.length === 4 && opCodeString.substring(0,2).toUpperCase() === 'CB') {
+    indexOfGridToUpdate = 1;
+    opCodeStringToPlaceInGrid = opCodeString.substring(2);
+  }
+
+  const msbValue = parseInt(opCodeStringToPlaceInGrid[0], 16);
+  const lsbValue = parseInt(opCodeStringToPlaceInGrid[1], 16);
 
   const row = msbValue;
   const column = lsbValue;
 
-  if (grid[msbValue][lsbValue]) {
+  if (grids[indexOfGridToUpdate][msbValue][lsbValue]) {
     console.error("ERROR: Tried to set cell for", opCodeString, "but instruction for that op code already exists!");
-    console.error("Tried to write", value, "over existing value", grid[row][column]);
+    console.error("Tried to write", value, "over existing value", grids[indexOfGridToUpdate][row][column]);
     return;
   }
-  grid[row][column] = value;
+  grids[indexOfGridToUpdate][row][column] = value;
 }

@@ -1,18 +1,6 @@
-import { generateAllInstructions } from '../../generators';
-import { createInitialOpCodesGrid, setCellForOpCode } from '../../helpers/grid-helpers';
-
-// Set up:
-const opCodesGrid = createInitialOpCodesGrid();
-const instructions = generateAllInstructions();
-
-// iterate over opcodes to place objects into opCodesGrid
-instructions.forEach(instruction => {
-  setCellForOpCode(instruction.opCode, instruction, opCodesGrid);
-});
-
-const OpCodeTable = () => (
-  <table id="op-code-table">
-    <caption>Game Boy CPU instructions, organized by op code</caption>
+const OpCodeTable = ({ opCodesGrid, caption }) => (
+  <table className="op-code-table">
+    <caption>{ caption }</caption>
     <tbody>
       <tr>
         <td></td>

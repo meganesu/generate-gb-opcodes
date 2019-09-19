@@ -1,13 +1,13 @@
-#op-code-table {
+.op-code-table {
   border-collapse: collapse;
   background-color: #9F9F9F;
 }
 
-#op-code-table th {
+.op-code-table th {
   border: 1px solid black;
 }
 
-#op-code-table td {
+.op-code-table td {
   border: 1px solid black;
 }
 
