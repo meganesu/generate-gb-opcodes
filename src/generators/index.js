@@ -63,6 +63,10 @@ import { generate_ADD_SP_s8 } from './16-bit-arithmetic-operation/ADD_SP_s8';
 import { generate_INC_r16 } from './16-bit-arithmetic-operation/INC_r16';
 import { generate_DEC_r16 } from './16-bit-arithmetic-operation/DEC_r16';
 
+// Rotate shift instructions
+import { generate_RLCA } from './rotate-shift/RLCA';
+import { generate_RLA } from './rotate-shift/RLA';
+
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
@@ -120,7 +124,9 @@ export const instructionGenerators = [
   generate_ADD_HL_r16,
   generate_ADD_SP_s8,
   generate_INC_r16,
-  generate_DEC_r16
+  generate_DEC_r16,
+  generate_RLCA,
+  generate_RLA
 ];
 
 // call each generator function
