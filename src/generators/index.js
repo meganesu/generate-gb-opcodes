@@ -68,6 +68,7 @@ import { generate_RLCA } from './rotate-shift/RLCA';
 import { generate_RLA } from './rotate-shift/RLA';
 import { generate_RRCA } from './rotate-shift/RRCA';
 import { generate_RRA } from './rotate-shift/RRA';
+import { generate_RLC_r8 } from './rotate-shift/RLC_r8';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -130,7 +131,8 @@ export const instructionGenerators = [
   generate_RLCA,
   generate_RLA,
   generate_RRCA,
-  generate_RRA
+  generate_RRA,
+  generate_RLC_r8
 ];
 
 // call each generator function
