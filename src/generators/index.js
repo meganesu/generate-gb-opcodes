@@ -72,6 +72,7 @@ import { generate_RLC_r8 } from './rotate-shift/RLC_r8';
 import { generate_RLC_memory_at_HL } from './rotate-shift/RLC_memory_at_HL';
 import { generate_RL_r8 } from './rotate-shift/RL_r8';
 import { generate_RL_memory_at_HL } from './rotate-shift/RL_memory_at_HL';
+import { generate_RRC_r8 } from './rotate-shift/RRC_r8';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -138,7 +139,8 @@ export const instructionGenerators = [
   generate_RLC_r8,
   generate_RLC_memory_at_HL,
   generate_RL_r8,
-  generate_RL_memory_at_HL
+  generate_RL_memory_at_HL,
+  generate_RRC_r8
 ];
 
 // call each generator function
