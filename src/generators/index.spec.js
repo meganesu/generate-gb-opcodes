@@ -35,6 +35,10 @@ describe('generateAllInstructions', () => {
       expect(instruction.flags).toBeInstanceOf(Object);
       expect(instruction.cycles).toBeGreaterThan(0);
       expect(instruction.opCode).toMatch(new RegExp('^[A-F\\d]*$', 'g'));
+
+      if (instruction.opCode.length === 4) {
+        expect(instruction.opCode.substring(0, 2)).toEqual('CB');
+      }
     });
   });
 });
