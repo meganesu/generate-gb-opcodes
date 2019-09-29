@@ -80,6 +80,7 @@ import { generate_SLA_r8 } from './rotate-shift/SLA_r8';
 import { generate_SLA_memory_at_HL } from './rotate-shift/SLA_memory_at_HL';
 import { generate_SRA_r8 } from './rotate-shift/SRA_r8';
 import { generate_SRA_memory_at_HL } from './rotate-shift/SRA_memory_at_HL';
+import { generate_SRL_r8 } from './rotate-shift/SRL_r8';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -154,7 +155,8 @@ export const instructionGenerators = [
   generate_SLA_r8,
   generate_SLA_memory_at_HL,
   generate_SRA_r8,
-  generate_SRA_memory_at_HL
+  generate_SRA_memory_at_HL,
+  generate_SRL_r8
 ];
 
 // call each generator function
