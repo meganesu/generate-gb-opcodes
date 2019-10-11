@@ -85,6 +85,9 @@ import { generate_SRL_memory_at_HL } from './rotate-shift/SRL_memory_at_HL';
 import { generate_SWAP_r8 } from './rotate-shift/SWAP_r8';
 import { generate_SWAP_memory_at_HL } from './rotate-shift/SWAP_memory_at_HL';
 
+// Bit operation instructions
+import { generate_BIT_b1_r8 } from './bit-operation/BIT_b1_r8';
+
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
@@ -162,8 +165,8 @@ export const instructionGenerators = [
   generate_SRL_r8,
   generate_SRL_memory_at_HL,
   generate_SWAP_r8,
-  generate_SWAP_memory_at_HL
-
+  generate_SWAP_memory_at_HL,
+  generate_BIT_b1_r8
 ];
 
 // call each generator function
