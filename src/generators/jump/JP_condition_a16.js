@@ -1,12 +1,6 @@
 import { instructionTypes } from "../constants";
+import { conditions } from './constants';
 import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
-
-const conditions = {
-  NZ: '00', // !Z
-  Z: '01',
-  NC: '10', // !CY
-  C: '11'   // CY
-}
 
 export const generate_JP_condition_a16 = () => {
   const instructions = [];
