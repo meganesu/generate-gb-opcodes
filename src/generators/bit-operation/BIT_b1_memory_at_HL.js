@@ -10,8 +10,13 @@ export const generate_BIT_b1_memory_at_HL = () => {
 
     instruction.mnemonic = `BIT ${bit}, (HL)`;
     instruction.type = instructionTypes.BIT_OPERATION;
-    instruction.flags = {}
-    instruction.cycles = 2;
+    instruction.flags = {
+      CY: '',
+      H: '1',
+      N: '0',
+      Z: '!(HL)b'
+    }
+    instruction.cycles = 4;
 
     const opCodeInBinary = `1100101101${bitBinaryValues[bit]}110`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

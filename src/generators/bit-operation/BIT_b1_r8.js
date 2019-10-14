@@ -11,7 +11,12 @@ export const generate_BIT_b1_r8 = () => {
 
       instruction.mnemonic = `BIT ${bit}, ${register}`;
       instruction.type = instructionTypes.BIT_OPERATION;
-      instruction.flags = {}
+      instruction.flags = {
+        CY: '',
+        H: '1',
+        N: '0',
+        Z: '!rb',
+      }
       instruction.cycles = 2;
 
       const opCodeInBinary = `1100101101${bitBinaryValues[bit]}${registerBinaryCodes[register]}`;
