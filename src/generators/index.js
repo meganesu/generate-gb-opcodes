@@ -93,6 +93,9 @@ import { generate_SET_b1_memory_at_HL } from './bit-operation/SET_b1_memory_at_H
 import { generate_RES_b1_r8 } from './bit-operation/RES_b1_r8';
 import { generate_RES_b1_memory_at_HL } from './bit-operation/RES_b1_memory_at_HL';
 
+// Jump instructions
+import { generate_JP_a16 } from './jump/JP_a16';
+
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
@@ -176,7 +179,8 @@ export const instructionGenerators = [
   generate_SET_b1_r8,
   generate_SET_b1_memory_at_HL,
   generate_RES_b1_r8,
-  generate_RES_b1_memory_at_HL
+  generate_RES_b1_memory_at_HL,
+  generate_JP_a16
 ];
 
 // call each generator function
