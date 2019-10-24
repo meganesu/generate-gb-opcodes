@@ -14,6 +14,8 @@ This is a bit of a side project that came out of my attempt to make a Game Boy e
 * `a16` - 16-bit immediate address value
 * `s8` - 8-bit signed immediate data value
 
+* Some conditional jump instructions take a different number of cycles depending on whether or not the specified condition is true (e.g., `JP NZ, a16`).
+
 ## Credits
 
 * [Gameboy Development Manual v1.1](https://archive.org/details/GameBoyProgManVer1.1) - I used this to create the generator functions for the different permutations of each mnemonic.
