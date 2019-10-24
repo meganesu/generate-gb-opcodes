@@ -1,3 +1,5 @@
+import InstructionCell from "../instruction-cell";
+
 const OpCodeTable = ({ opCodesGrid, caption }) => (
   <table className="op-code-table">
     <caption>{ caption }</caption>
@@ -15,16 +17,23 @@ const OpCodeTable = ({ opCodesGrid, caption }) => (
           <tr key={`${rowIndex.toString(16)}x`}>
             <th scope="row">{`${rowIndex.toString(16).toUpperCase()}x`}</th>
             {
-              gridRow.map((gridCell, columnIndex) => (
-                <td
-                  key={`${rowIndex}${columnIndex}`}
-                  className={`instruction ${gridCell.type}`}
-                >
-                {
-                  gridCell.mnemonic ? gridCell.mnemonic : gridCell
+              gridRow.map((gridCell, columnIndex) => {
+                const cellKey = `${rowIndex}${columnIndex}`;
+                const doesCellContainInstruction = typeof(gridCell) === "object";
+
+                if (doesCellContainInstruction) {
+                  return (
+                    <InstructionCell
+                      key={cellKey}
+                      instruction={gridCell}
+                    />
+                  );
+                } else {
+                  return (
+                    <td key={cellKey} className="instruction"></td>
+                  );
                 }
-                </td>
-              ))
+              })
             }
           </tr>
         ))
