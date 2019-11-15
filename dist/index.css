@@ -3,6 +3,10 @@
   background-color: #9F9F9F;
 }
 
+.op-code-table tbody {
+  font-family: monospace;
+}
+
 .op-code-table th {
   border: 1px solid black;
 }
@@ -13,6 +17,11 @@
 
 .instruction {
   background-color: #BFBFBF;
+  text-align: center;
+}
+
+.instruction span {
+  display: block;
 }
 
 .eight-bit-transfer-and-io {
