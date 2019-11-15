@@ -45,7 +45,11 @@ describe('InstructionCell', () => {
 
   it.todo('renders the number of bytes');
 
-  it.todo('renders the number of cycles');
+  it('renders the number of cycles', () => {
+    expect(component.find('.cycles')).toHaveLength(1);
+  });
 
-  it.todo('renders the instruction flags');
+  it('renders the instruction flags', () => {
+    expect(component.find('.flags')).toHaveLength(1);
+  });
 });
