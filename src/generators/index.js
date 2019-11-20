@@ -100,6 +100,9 @@ import { generate_JR_s8 } from './jump/JR_s8';
 import { generate_JR_condition_s8 } from './jump/JR_condition_s8';
 import { generate_JP_memory_at_HL } from './jump/JP_memory_at_HL';
 
+// Call and return instructions
+import { generate_CALL_a16 } from './call-and-return/generate_CALL_a16';
+
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
@@ -188,7 +191,8 @@ export const instructionGenerators = [
   generate_JP_condition_a16,
   generate_JR_s8,
   generate_JR_condition_s8,
-  generate_JP_memory_at_HL
+  generate_JP_memory_at_HL,
+  generate_CALL_a16,
 ];
 
 // call each generator function
