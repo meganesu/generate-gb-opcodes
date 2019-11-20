@@ -108,6 +108,9 @@ import { generate_RETI } from './call-and-return/RETI';
 import { generate_RET_condition } from './call-and-return/RET_condition';
 import { generate_RST_t3 } from './call-and-return/RST_t3';
 
+// General-purpose arithmetic operations and CPU control instructions
+import { generate_DAA } from './general-purpose-arithmetic-operations-and-cpu-control/DAA';
+
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
   generate_LD_r_from_d8,
@@ -203,6 +206,7 @@ export const instructionGenerators = [
   generate_RETI,
   generate_RET_condition,
   generate_RST_t3,
+  generate_DAA,
 ];
 
 // call each generator function
