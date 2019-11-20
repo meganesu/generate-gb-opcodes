@@ -106,6 +106,7 @@ import { generate_CALL_condition_a16 } from './call-and-return/CALL_condition_a1
 import { generate_RET } from './call-and-return/RET';
 import { generate_RETI } from './call-and-return/RETI';
 import { generate_RET_condition } from './call-and-return/RET_condition';
+import { generate_RST_t3 } from './call-and-return/RST_t3';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -201,6 +202,7 @@ export const instructionGenerators = [
   generate_RET,
   generate_RETI,
   generate_RET_condition,
+  generate_RST_t3,
 ];
 
 // call each generator function
