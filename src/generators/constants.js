@@ -19,3 +19,10 @@ export const registerBinaryCodes = {
   H: '100',
   L: '101'
 };
+
+export const conditions = {
+  NZ: '00', // !Z
+  Z: '01',  // Z
+  NC: '10', // !CY
+  C: '11'   // CY
+};

@@ -1,5 +1,4 @@
-import { instructionTypes } from "../constants";
-import { conditions } from './constants';
+import { instructionTypes, conditions } from "../constants";
 import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
 
 export const generate_JP_condition_a16 = () => {
