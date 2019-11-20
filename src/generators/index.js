@@ -103,6 +103,7 @@ import { generate_JP_memory_at_HL } from './jump/JP_memory_at_HL';
 // Call and return instructions
 import { generate_CALL_a16 } from './call-and-return/CALL_a16';
 import { generate_CALL_condition_a16 } from './call-and-return/CALL_condition_a16';
+import { generate_RET } from './call-and-return/RET';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -195,6 +196,7 @@ export const instructionGenerators = [
   generate_JP_memory_at_HL,
   generate_CALL_a16,
   generate_CALL_condition_a16,
+  generate_RET,
 ];
 
 // call each generator function
