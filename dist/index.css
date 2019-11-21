@@ -20,6 +20,13 @@
   text-align: center;
 }
 
+.instruction button {
+  width: 100%;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
 .instruction span {
   display: block;
 }
