@@ -114,6 +114,7 @@ import { generate_CPL } from './general-purpose-arithmetic-operations-and-cpu-co
 import { generate_NOP } from './general-purpose-arithmetic-operations-and-cpu-control/NOP';
 import { generate_CCF } from './general-purpose-arithmetic-operations-and-cpu-control/CCF';
 import { generate_SCF } from './general-purpose-arithmetic-operations-and-cpu-control/SCF';
+import { generate_DI } from './general-purpose-arithmetic-operations-and-cpu-control/DI';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -215,6 +216,7 @@ export const instructionGenerators = [
   generate_NOP,
   generate_CCF,
   generate_SCF,
+  generate_DI,
 ];
 
 // call each generator function
