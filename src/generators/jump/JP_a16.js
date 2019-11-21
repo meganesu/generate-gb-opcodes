@@ -8,6 +8,7 @@ export const generate_JP_a16 = () => {
   instruction.type = instructionTypes.JUMP;
   instruction.flags = {};
   instruction.cycles = 4;
+  instruction.bytes = 3;
 
   const opCodeInBinary = '11000011';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

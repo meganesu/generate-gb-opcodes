@@ -18,6 +18,7 @@ export const generate_PUSH_rr = () => {
     instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
     instruction.flags = {};
     instruction.cycles = 4;
+    instruction.bytes = 1;
 
     const opCodeInBinary = `11${registerPairBinaryCodes[register]}0101`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

@@ -18,6 +18,7 @@ export const generate_LD_rr_from_d16 = () => {
     instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
     instruction.flags = {};
     instruction.cycles = 3;
+    instruction.bytes = 3;
 
     const opCodeInBinary = `00${registerPairBinaryCodes[register]}0001`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

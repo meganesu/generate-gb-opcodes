@@ -17,6 +17,7 @@ export const generate_BIT_b1_memory_at_HL = () => {
       Z: '!(HL)b'
     }
     instruction.cycles = 4;
+    instruction.bytes = 2;
 
     const opCodeInBinary = `1100101101${bitBinaryValues[bit]}110`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

@@ -13,6 +13,7 @@ export const generate_SRL_memory_at_HL = () => {
     Z: 'Z'
   }
   instruction.cycles = 4;
+  instruction.bytes = 2;
 
   const opCodeInBinary = '1100101100111110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

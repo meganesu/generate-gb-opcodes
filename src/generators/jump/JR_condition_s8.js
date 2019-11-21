@@ -11,6 +11,7 @@ export const generate_JR_condition_s8 = () => {
     instruction.type = instructionTypes.JUMP;
     instruction.flags = {};
     instruction.cycles = '3/2'; // 3 if condition and flag status match; 2 if not match
+    instruction.bytes = 2;
 
     const opCodeInBinary = `001${conditions[condition]}000`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

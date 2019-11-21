@@ -16,6 +16,7 @@ export const generate_SBC_A_r8 = () => {
       Z: 'Z'
     };
     instruction.cycles = 1;
+    instruction.bytes = 1;
 
     const opCodeInBinary = `10011${registerBinaryCodes[register]}`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

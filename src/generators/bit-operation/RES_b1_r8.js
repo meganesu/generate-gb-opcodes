@@ -13,6 +13,7 @@ export const generate_RES_b1_r8 = () => {
       instruction.type = instructionTypes.BIT_OPERATION;
       instruction.flags = {}
       instruction.cycles = 2;
+      instruction.bytes = 2;
 
       const opCodeInBinary = `1100101110${bitBinaryValues[bit]}${registerBinaryCodes[register]}`;
       instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

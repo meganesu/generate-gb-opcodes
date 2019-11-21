@@ -13,6 +13,7 @@ export const generate_LD_r_from_rPrime = () => {
           instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
           instruction.flags = {};
           instruction.cycles = 1;
+          instruction.bytes = 1;
 
           const opCodeInBinary = `01${registerBinaryCodes[r]}${registerBinaryCodes[rPrime]}`
           instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

@@ -16,6 +16,7 @@ export const generate_SRA_r8 = () => {
       Z: 'Z'
     };
     instruction.cycles = 2;
+    instruction.bytes = 2;
 
     const opCodeInBinary = `1100101100101${registerBinaryCodes[register]}`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

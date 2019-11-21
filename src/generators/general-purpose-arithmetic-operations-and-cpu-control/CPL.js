@@ -13,6 +13,7 @@ export const generate_CPL = () => {
     Z: '-',
   };
   instruction.cycles = 1;
+  instruction.bytes = 1;
 
   const opCodeInBinary = '00101111';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

@@ -13,6 +13,7 @@ export const generate_ADD_SP_s8 = () => {
     Z: '0'
   };
   instruction.cycles = 4;
+  instruction.bytes = 2;
 
   const opCodeInBinary = '11101000';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

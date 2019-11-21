@@ -13,6 +13,7 @@ export const generate_DAA = () => {
     Z: 'Z',
   };
   instruction.cycles = 1;
+  instruction.bytes = 1;
 
   const opCodeInBinary = '00100111';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

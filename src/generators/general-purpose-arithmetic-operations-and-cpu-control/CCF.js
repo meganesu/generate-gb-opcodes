@@ -13,6 +13,7 @@ export const generate_CCF = () => {
     Z: '-',
   };
   instruction.cycles = 1;
+  instruction.bytes = 1;
 
   const opCodeInBinary = '00111111';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

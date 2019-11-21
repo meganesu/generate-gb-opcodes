@@ -16,6 +16,7 @@ export const generate_ADC_A_r8 = () => {
       Z: 'Z'
     };
     instruction.cycles = 2;
+    instruction.bytes = 1;
 
     const opCodeInBinary = `10001${registerBinaryCodes[register]}`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

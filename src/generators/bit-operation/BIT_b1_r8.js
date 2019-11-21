@@ -18,6 +18,7 @@ export const generate_BIT_b1_r8 = () => {
         Z: '!rb',
       }
       instruction.cycles = 2;
+      instruction.bytes = 2;
 
       const opCodeInBinary = `1100101101${bitBinaryValues[bit]}${registerBinaryCodes[register]}`;
       instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

@@ -12,6 +12,7 @@ export const generate_INC_r16 = () => {
     instruction.type = instructionTypes.SIXTEEN_BIT_ARITHMETIC_OPERATION;
     instruction.flags = {};
     instruction.cycles = 2;
+    instruction.bytes = 1;
 
     const opCodeInBinary = `00${registerPairBinaryValues[registerPair]}0011`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

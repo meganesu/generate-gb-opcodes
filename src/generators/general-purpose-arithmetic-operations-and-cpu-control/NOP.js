@@ -8,6 +8,7 @@ export const generate_NOP = () => {
   instruction.type = instructionTypes.GENERAL_PURPOSE_ARITHMETIC_OPERATIONS_AND_CPU_CONTROL;
   instruction.flags = {};
   instruction.cycles = 1;
+  instruction.bytes = 1;
 
   const opCodeInBinary = '00000000';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

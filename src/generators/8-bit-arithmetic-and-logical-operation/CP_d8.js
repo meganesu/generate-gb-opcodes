@@ -13,6 +13,7 @@ export const generate_CP_d8 = () => {
     Z: 'Z'
   };
   instruction.cycles = 2;
+  instruction.bytes = 2;
 
   const opCodeInBinary = '11111110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

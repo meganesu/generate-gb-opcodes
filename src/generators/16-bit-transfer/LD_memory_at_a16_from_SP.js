@@ -8,6 +8,7 @@ export const generate_LD_memory_at_a16_from_SP = () => {
   instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
   instruction.flags = {};
   instruction.cycles = 5;
+  instruction.bytes = 3;
 
   const opCodeInBinary = '00001000';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

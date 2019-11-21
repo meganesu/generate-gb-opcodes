@@ -8,6 +8,7 @@ export const generate_LD_A_from_memory_at_BC = () => {
   instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
   instruction.flags = {};
   instruction.cycles = 2;
+  instruction.bytes = 1;
 
   const opCodeInBinary = "00001010";
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

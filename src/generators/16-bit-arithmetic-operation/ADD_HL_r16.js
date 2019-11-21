@@ -16,6 +16,7 @@ export const generate_ADD_HL_r16 = () => {
       N: '0'
     };
     instruction.cycles = 2;
+    instruction.bytes = 1;
 
     const opCodeInBinary = `00${registerPairBinaryValues[registerPair]}1001`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

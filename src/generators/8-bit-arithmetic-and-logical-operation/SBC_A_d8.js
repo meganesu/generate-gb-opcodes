@@ -13,6 +13,7 @@ export const generate_SBC_A_d8 = () => {
     Z: 'Z'
   };
   instruction.cycles = 2;
+  instruction.bytes = 2;
 
   const opCodeInBinary = '11011110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

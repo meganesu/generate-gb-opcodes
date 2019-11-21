@@ -8,6 +8,7 @@ export const generate_CALL_a16 = () => {
   instruction.type = instructionTypes.CALL_AND_RETURN;
   instruction.flags = {};
   instruction.cycles = 6;
+  instruction.bytes = 3;
 
   const opCodeInBinary = '11001101';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

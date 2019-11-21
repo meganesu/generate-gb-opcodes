@@ -8,6 +8,7 @@ export const generate_DI = () => {
   instruction.type = instructionTypes.GENERAL_PURPOSE_ARITHMETIC_OPERATIONS_AND_CPU_CONTROL;
   instruction.flags = {};
   instruction.cycles = 1;
+  instruction.bytes = 1;
 
   const opCodeInBinary = '11110011';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

@@ -12,6 +12,7 @@ export const generate_DEC_memory_at_HL = () => {
     Z: 'Z'
   };
   instruction.cycles = 3;
+  instruction.bytes = 1;
 
   const opCodeInBinary = '00110101';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

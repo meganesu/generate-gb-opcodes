@@ -13,6 +13,7 @@ export const generate_RRA = () => {
     Z: '0'
   }
   instruction.cycles = 1;
+  instruction.bytes = 1;
 
   const opCodeInBinary = '00011111';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

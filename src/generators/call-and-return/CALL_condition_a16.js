@@ -11,6 +11,7 @@ export const generate_CALL_condition_a16 = () => {
     instruction.type = instructionTypes.CALL_AND_RETURN;
     instruction.flags = {};
     instruction.cycles = '6/3'; // 6 if condition and flag status match; 3 if not match
+    instruction.bytes = 3;
 
     const opCodeInBinary = `110${conditions[condition]}100`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

@@ -15,6 +15,7 @@ export const generate_INC_r8 = () => {
       Z: 'Z'
     };
     instruction.cycles = 1;
+    instruction.bytes = 1;
 
     const opCodeInBinary = `00${registerBinaryCodes[register]}100`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

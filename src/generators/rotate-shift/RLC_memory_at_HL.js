@@ -13,6 +13,7 @@ export const generate_RLC_memory_at_HL = () => {
     Z: 'Z'
   }
   instruction.cycles = 4;
+  instruction.bytes = 2;
 
   const opCodeInBinary = '1100101100000110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

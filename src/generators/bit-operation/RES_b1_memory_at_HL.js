@@ -12,6 +12,7 @@ export const generate_RES_b1_memory_at_HL = () => {
     instruction.type = instructionTypes.BIT_OPERATION;
     instruction.flags = {}
     instruction.cycles = 4;
+    instruction.bytes = 2;
 
     const opCodeInBinary = `1100101110${bitBinaryValues[bit]}110`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

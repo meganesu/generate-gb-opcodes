@@ -8,6 +8,7 @@ export const generate_LD_SP_from_HL = () => {
   instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
   instruction.flags = {};
   instruction.cycles = 2;
+  instruction.bytes = 1;
 
   const opCodeInBinary = "11111001";
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

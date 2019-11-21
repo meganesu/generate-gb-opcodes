@@ -13,6 +13,7 @@ export const generate_SWAP_memory_at_HL = () => {
     Z: 'Z'
   }
   instruction.cycles = 4;
+  instruction.bytes = 2;
 
   const opCodeInBinary = '1100101100110110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);

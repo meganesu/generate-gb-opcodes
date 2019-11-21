@@ -18,6 +18,7 @@ export const generate_POP_rr = () => {
     instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
     instruction.flags = {};
     instruction.cycles = 3;
+    instruction.bytes = 1;
 
     const opCodeInBinary = `11${registerPairBinaryCodes[register]}0001`;
     instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
