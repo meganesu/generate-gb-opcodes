@@ -117,6 +117,7 @@ import { generate_SCF } from './general-purpose-arithmetic-operations-and-cpu-co
 import { generate_DI } from './general-purpose-arithmetic-operations-and-cpu-control/DI';
 import { generate_EI } from './general-purpose-arithmetic-operations-and-cpu-control/EI';
 import { generate_HALT } from './general-purpose-arithmetic-operations-and-cpu-control/HALT';
+import { generate_STOP } from './general-purpose-arithmetic-operations-and-cpu-control/STOP';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -221,6 +222,7 @@ export const instructionGenerators = [
   generate_DI,
   generate_EI,
   generate_HALT,
+  generate_STOP,
 ];
 
 // call each generator function
