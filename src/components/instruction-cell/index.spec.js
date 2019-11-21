@@ -14,6 +14,7 @@ describe('InstructionCell', () => {
       Z: 'Z',
     },
     cycles: '4',
+    bytes: 3,
   }
 
   beforeAll(() => {
@@ -43,7 +44,9 @@ describe('InstructionCell', () => {
 
   it.todo('adds a visually hidden instruction type (for screen readers)')
 
-  it.todo('renders the number of bytes');
+  it('renders the number of bytes', () => {
+    expect(component.find('.bytes')).toHaveLength(1);
+  });
 
   it('renders the number of cycles', () => {
     expect(component.find('.cycles')).toHaveLength(1);
