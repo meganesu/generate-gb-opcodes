@@ -112,6 +112,7 @@ import { generate_RST_t3 } from './call-and-return/RST_t3';
 import { generate_DAA } from './general-purpose-arithmetic-operations-and-cpu-control/DAA';
 import { generate_CPL } from './general-purpose-arithmetic-operations-and-cpu-control/CPL';
 import { generate_NOP } from './general-purpose-arithmetic-operations-and-cpu-control/NOP';
+import { generate_CCF } from './general-purpose-arithmetic-operations-and-cpu-control/CCF';
 
 export const instructionGenerators = [
   generate_LD_r_from_rPrime,
@@ -211,6 +212,7 @@ export const instructionGenerators = [
   generate_DAA,
   generate_CPL,
   generate_NOP,
+  generate_CCF,
 ];
 
 // call each generator function
