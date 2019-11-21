@@ -5,7 +5,7 @@ export const generate_DAA = () => {
   const instruction = {};
 
   instruction.mnemonic = 'DAA';
-  instruction.type = instructionTypes.CALL_AND_RETURN;
+  instruction.type = instructionTypes.GENERAL_PURPOSE_ARITHMETIC_OPERATIONS_AND_CPU_CONTROL;
   instruction.flags = {
     CY: 'CY',
     H: '0',
