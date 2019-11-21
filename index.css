@@ -24,6 +24,11 @@
   display: block;
 }
 
+span.bytes, span.cycles {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 .eight-bit-transfer-and-io {
   background-color: #CCCCFF;
 }
