@@ -1,5 +1,6 @@
 import App from '.';
 import OpCodeTable from '../op-code-table';
+import DetailsSidebar from '../details-sidebar';
 import { mount } from 'enzyme';
 import * as generators from '../../generators';
 import * as gridHelpers from '../../helpers/grid-helpers';
@@ -37,6 +38,28 @@ describe('App', () => {
   });
 
   it('renders one OpCodeTable for each grid', () => {
-    expect(component.find(OpCodeTable).length).toEqual(2);
+    expect(component.find(OpCodeTable)).toHaveLength(2);
   });
+
+  it('does not render DetailsSidebar', () => {
+    expect(component.find(DetailsSidebar)).toHaveLength(0);
+  })
+
+  describe('when InstructionCell in OpCodeTable is clicked', () => {
+    let instructionClicked;
+
+    beforeAll(() => {
+      const instructionCells = component.find('InstructionCell');
+      expect(instructionCells.length).toBeGreaterThan(1);
+      instructionCells.first().find('button').simulate('click');
+      instructionClicked = instructionCells.first().prop('instruction');
+    });
+
+    it('renders the Sidebar', () => {
+      expect(component.find(DetailsSidebar).length).toEqual(1);
+    });
+    it('updates the activeInstruction passed to the Sidebar', () => {
+      expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClicked);
+    });
+  })
 });

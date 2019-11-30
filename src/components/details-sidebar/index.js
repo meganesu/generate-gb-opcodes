@@ -7,7 +7,7 @@ const DetailsSidebar = ({activeInstruction}) => (
     >
       X
     </button>
-    {activeInstruction}
+    {activeInstruction && activeInstruction.mnemonic}
   </div>
 );
 
