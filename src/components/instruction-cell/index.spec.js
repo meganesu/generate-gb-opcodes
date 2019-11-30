@@ -17,12 +17,17 @@ describe('InstructionCell', () => {
     bytes: 3,
   }
 
+  const clickStub = jest.fn();
+
   beforeAll(() => {
     component = mount(
       <table>
         <tbody>
           <tr>
-            <InstructionCell instruction={instruction} />
+            <InstructionCell
+              instruction={instruction}
+              setActiveInstruction={clickStub}
+            />
           </tr>
         </tbody>
       </table>
@@ -55,4 +60,14 @@ describe('InstructionCell', () => {
   it('renders the instruction flags', () => {
     expect(component.find('.flags')).toHaveLength(1);
   });
+
+  describe('when clicked', () => {
+    beforeAll(() => {
+      expect(component.find('button')).toHaveLength(1);
+      component.find('button').simulate('click');
+    });
+    it('calls the click handler from props', () => {
+      expect(clickStub.mock.calls).toHaveLength(1);
+    })
+  })
 });

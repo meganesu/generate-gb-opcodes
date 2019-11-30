@@ -1,5 +1,5 @@
 const InstructionCell = props => {
-  const { instruction } = props;
+  const { instruction, setActiveInstruction } = props;
 
   const z = instruction.flags.Z || '-';
   const n = instruction.flags.N || '-';
@@ -12,6 +12,7 @@ const InstructionCell = props => {
     >
       <button
         aria-label={`Opcode: 0x${instruction.opCode}; Instruction: ${instruction.mnemonic}`}
+        onClick={() => setActiveInstruction(instruction)}
       >
         <span className='mnemonic'>{instruction.mnemonic}</span>
         <span className='bytes'>{instruction.bytes}</span>
