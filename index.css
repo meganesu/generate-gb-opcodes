@@ -71,3 +71,14 @@ span.bytes, span.cycles {
 .general-purpose-arithmetic-operations-and-cpu-control {
   background-color: #FF99CC;
 }
+
+#details-sidebar {
+  position: fixed;
+  float: right;
+  top: 0;
+  right: 0px;
+  width: 40%;
+  min-width: 400px;
+  background: blue;
+  height: 100vh;
+}
