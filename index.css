@@ -1,6 +1,11 @@
+body {
+  width: max-content;
+}
+
 .op-code-table {
   border-collapse: collapse;
   background-color: #9F9F9F;
+  width: 100%;
 }
 
 .op-code-table tbody {
@@ -13,6 +18,7 @@
 
 .op-code-table td {
   border: 1px solid black;
+  white-space: nowrap;
 }
 
 .instruction {
@@ -25,6 +31,10 @@
   font-family: monospace;
   background-color: rgba(0, 0, 0, 0);
   border: none;
+}
+
+.instruction button:hover, .instruction button:focus {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .instruction span {
@@ -79,8 +89,10 @@ span.bytes, span.cycles {
   right: 0px;
   width: 40%;
   min-width: 400px;
-  background: blue;
   height: 100vh;
+  background: white;
+  box-shadow: -5px 0px 15px rgb(0,0,0,0.2);
+  padding: 20px;
 }
 
 #details-sidebar button {
