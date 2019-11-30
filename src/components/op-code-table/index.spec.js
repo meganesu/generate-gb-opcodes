@@ -5,6 +5,7 @@ import { mount } from 'enzyme';
 describe('OpCodeTable', () => {
   let component;
   let grid;
+  
   const instructions = [
     {
       mnemonic: 'TEST1',
@@ -24,7 +25,9 @@ describe('OpCodeTable', () => {
       flags: {},
       cycles: '1',
     },
-  ]
+  ];
+
+  const setActiveInstructionStub = jest.fn();
 
   beforeAll(() => {
     grid = new Array(16);
@@ -39,7 +42,12 @@ describe('OpCodeTable', () => {
     grid[4][5] = instructions[1];
     grid[6][8] = instructions[2];
 
-    component = mount(<OpCodeTable opCodesGrid={grid} />);
+    component = mount(
+      <OpCodeTable
+        opCodesGrid={grid}
+        setActiveInstruction={setActiveInstructionStub}
+      />
+    );
   });
 
   it('mounts', () => {
@@ -54,4 +62,10 @@ describe('OpCodeTable', () => {
   it('renders the right number of InstructionCell components', () => {
     expect(component.find(InstructionCell)).toHaveLength(instructions.length);
   })
+  it('passes the setActiveInstruction prop down to InstructionCell components', () => {
+    component.find(InstructionCell).forEach(instructionCell => {
+      expect(instructionCell.prop('setActiveInstruction')).toBeDefined();
+      expect(instructionCell.prop('setActiveInstruction')).toEqual(component.prop('setActiveInstruction'));
+    })
+  });
 });

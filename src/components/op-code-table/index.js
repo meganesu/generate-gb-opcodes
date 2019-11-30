@@ -1,6 +1,6 @@
 import InstructionCell from "../instruction-cell";
 
-const OpCodeTable = ({ opCodesGrid, caption }) => (
+const OpCodeTable = ({ opCodesGrid, caption, setActiveInstruction }) => (
   <table className="op-code-table">
     <caption>{ caption }</caption>
     <tbody>
@@ -26,6 +26,7 @@ const OpCodeTable = ({ opCodesGrid, caption }) => (
                     <InstructionCell
                       key={cellKey}
                       instruction={gridCell}
+                      setActiveInstruction={setActiveInstruction}
                     />
                   );
                 } else {
