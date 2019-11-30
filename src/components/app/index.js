@@ -40,7 +40,10 @@ const App = () => {
         setActiveInstruction={updateSidebar}
       />
       { showSidebar &&
-        <DetailsSidebar activeInstruction={activeInstruction} />
+        <DetailsSidebar
+          activeInstruction={activeInstruction}
+          hideSidebar={() => setShowSidebar(false)}
+        />
       }
     </Fragment>
   );

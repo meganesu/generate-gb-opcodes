@@ -3,10 +3,10 @@ import DetailsSidebar from '.';
 
 describe('DetailsSidebar', () => {
   let component;
-  let toggleSidebarStub = jest.fn();
+  let hideSidebarStub = jest.fn();
   
   beforeAll(() => {
-    component = mount(<DetailsSidebar toggleSidebar={toggleSidebarStub} />);
+    component = mount(<DetailsSidebar hideSidebar={hideSidebarStub} />);
   });
 
   it('has a close sidebar button', () => {
@@ -17,6 +17,8 @@ describe('DetailsSidebar', () => {
     beforeAll(() => {
       component.find('button').simulate('click');
     })
-    it.todo('calls hideSidebar');
+    it('calls hideSidebar from props', () => {
+      expect(hideSidebarStub.mock.calls.length).toEqual(1);
+    });
   });
 });

@@ -1,9 +1,9 @@
-const DetailsSidebar = ({activeInstruction}) => (
+const DetailsSidebar = ({activeInstruction, hideSidebar}) => (
   <div id="details-sidebar">
     <button
       id="close-sidebar"
       aria-label="close details sidebar"
-      onClick={() => {console.log('close sidebar button clicked!')}}
+      onClick={hideSidebar}
     >
       X
     </button>

@@ -55,11 +55,21 @@ describe('App', () => {
       instructionClicked = instructionCells.first().prop('instruction');
     });
 
-    it('renders the Sidebar', () => {
-      expect(component.find(DetailsSidebar).length).toEqual(1);
+    it('renders the DetailsSidebar', () => {
+      expect(component.find(DetailsSidebar)).toHaveLength(1);
     });
-    it('updates the activeInstruction passed to the Sidebar', () => {
+    it('updates the activeInstruction passed to the DetailsSidebar', () => {
       expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClicked);
+    });
+
+    describe('when close sidebar button is clicked', () => {
+      beforeAll(() => {
+        expect(component.find('DetailsSidebar')).toHaveLength(1);
+        component.find('DetailsSidebar button').simulate('click');
+      });
+      it('hides the DetailsSidebar', () => {
+        expect(component.find('DetailsSidebar')).toHaveLength(0);
+      });
     });
   })
 });
