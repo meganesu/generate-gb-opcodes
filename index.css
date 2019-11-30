@@ -82,3 +82,7 @@ span.bytes, span.cycles {
   background: blue;
   height: 100vh;
 }
+
+#details-sidebar button {
+  float: right;
+}
