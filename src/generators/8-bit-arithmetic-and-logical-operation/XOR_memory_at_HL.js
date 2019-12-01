@@ -1,5 +1,6 @@
 import { instructionTypes } from '../constants';
-import { convertBinaryStringToHexString } from '../../helpers/convert-binary-string-to-hex-string';
+import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
+
 
 export const generate_XOR_memory_at_HL = () => {
   const instruction = {};

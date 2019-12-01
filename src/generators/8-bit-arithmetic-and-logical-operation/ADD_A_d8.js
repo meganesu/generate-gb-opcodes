@@ -1,4 +1,4 @@
-import { convertBinaryStringToHexString } from "../../helpers/convert-binary-string-to-hex-string";
+import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
 
 export const generate_ADD_A_d8 = () => {
