@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // 8-bit transfer and I/O instructions
 import { generate_LD_r_from_rPrime } from './8-bit-transfer-and-io/LD_r_from_rPrime';
 import { generate_LD_r_from_d8 } from './8-bit-transfer-and-io/LD_r_from_d8';
@@ -229,9 +230,9 @@ export const instructionGenerators = [
 export const generateAllInstructions = () => {
   let instructions = [];
 
-  for (let generatorFunction of instructionGenerators) {
+  instructionGenerators.forEach((generatorFunction) => {
     instructions = instructions.concat(generatorFunction());
-  }
-  
+  });
+
   return instructions; // list containing all instruction objects
 };

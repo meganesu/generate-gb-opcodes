@@ -1,25 +1,25 @@
-import { registerPairBinaryValues } from './constants';
+import { registerPairBinaryCodes } from './constants';
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-
-export const generate_INC_r16 = () => {
+export const generate_INC_r16 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
-  for (let registerPair in registerPairBinaryValues) {
-    const instruction = {};
+  Object.entries(registerPairBinaryCodes)
+    .forEach(([registerPair, registerPairBinaryCode]) => {
+      const instruction = {};
 
-    instruction.mnemonic = `INC ${registerPair}`;
-    instruction.type = instructionTypes.SIXTEEN_BIT_ARITHMETIC_OPERATION;
-    instruction.flags = {};
-    instruction.cycles = 2;
-    instruction.bytes = 1;
+      instruction.mnemonic = `INC ${registerPair}`;
+      instruction.type = instructionTypes.SIXTEEN_BIT_ARITHMETIC_OPERATION;
+      instruction.flags = {};
+      instruction.cycles = 2;
+      instruction.bytes = 1;
 
-    const opCodeInBinary = `00${registerPairBinaryValues[registerPair]}0011`;
-    instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+      const opCodeInBinary = `00${registerPairBinaryCode}0011`;
+      instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
-    instructions.push(instruction);
-  }
+      instructions.push(instruction);
+    });
 
   return instructions;
-}
+};

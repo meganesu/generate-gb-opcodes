@@ -2,7 +2,7 @@ import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
 
-export const generate_DEC_memory_at_HL = () => {
+export const generate_DEC_memory_at_HL = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'DEC (HL)';
@@ -10,7 +10,7 @@ export const generate_DEC_memory_at_HL = () => {
   instruction.flags = {
     H: '8-bit',
     N: '1',
-    Z: 'Z'
+    Z: 'Z',
   };
   instruction.cycles = 3;
   instruction.bytes = 1;
@@ -19,4 +19,4 @@ export const generate_DEC_memory_at_HL = () => {
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
   return instruction;
-}
+};

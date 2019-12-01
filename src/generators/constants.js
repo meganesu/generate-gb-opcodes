@@ -17,12 +17,12 @@ export const registerBinaryCodes = {
   D: '010',
   E: '011',
   H: '100',
-  L: '101'
+  L: '101',
 };
 
 export const conditions = {
   NZ: '00', // !Z
-  Z: '01',  // Z
+  Z: '01', // Z
   NC: '10', // !CY
-  C: '11'   // CY
+  C: '11', // CY
 };

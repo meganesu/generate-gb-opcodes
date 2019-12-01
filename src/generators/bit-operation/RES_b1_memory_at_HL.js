@@ -1,24 +1,25 @@
-import { instructionTypes } from "../constants";
-import { bitBinaryValues } from './constants';
+import { instructionTypes } from '../constants';
+import { bitBinaryCodes } from './constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_RES_b1_memory_at_HL = () => {
+export const generate_RES_b1_memory_at_HL = () => { // eslint-disable-line camelcase
   const instructions = [];
 
-  for (let bit in bitBinaryValues) {
-    const instruction = {};
+  Object.entries(bitBinaryCodes)
+    .forEach(([bit, bitBinaryCode]) => {
+      const instruction = {};
 
-    instruction.mnemonic = `RES ${bit}, (HL)`;
-    instruction.type = instructionTypes.BIT_OPERATION;
-    instruction.flags = {}
-    instruction.cycles = 4;
-    instruction.bytes = 2;
+      instruction.mnemonic = `RES ${bit}, (HL)`;
+      instruction.type = instructionTypes.BIT_OPERATION;
+      instruction.flags = {};
+      instruction.cycles = 4;
+      instruction.bytes = 2;
 
-    const opCodeInBinary = `1100101110${bitBinaryValues[bit]}110`;
-    instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+      const opCodeInBinary = `1100101110${bitBinaryCode}110`;
+      instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
-    instructions.push(instruction);
-  }
+      instructions.push(instruction);
+    });
 
   return instructions;
-}
+};

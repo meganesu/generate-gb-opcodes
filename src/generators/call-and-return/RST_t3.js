@@ -1,10 +1,10 @@
-import { instructionTypes } from "../constants";
+import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_RST_t3 = () => {
+export const generate_RST_t3 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
-  for (let t = 0; t < 8; t++) {
+  for (let t = 0; t < 8; t += 1) {
     const instruction = {};
 
     instruction.mnemonic = `RST ${t}`;
@@ -21,4 +21,4 @@ export const generate_RST_t3 = () => {
   }
 
   return instructions;
-}
+};

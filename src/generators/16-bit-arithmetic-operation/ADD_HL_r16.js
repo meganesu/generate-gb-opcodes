@@ -1,28 +1,29 @@
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
-import { instructionTypes } from "../constants";
-import { registerPairBinaryValues } from './constants';
+import { instructionTypes } from '../constants';
+import { registerPairBinaryCodes } from './constants';
 
-export const generate_ADD_HL_r16 = () => {
+export const generate_ADD_HL_r16 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
-  for (let registerPair in registerPairBinaryValues) {
-    const instruction = {};
+  Object.entries(registerPairBinaryCodes)
+    .forEach(([registerPair, registerPairBinaryCode]) => {
+      const instruction = {};
 
-    instruction.mnemonic = `ADD HL, ${registerPair}`;
-    instruction.type = instructionTypes.SIXTEEN_BIT_ARITHMETIC_OPERATION;
-    instruction.flags = {
-      CY: '16-bit',
-      H: '16-bit',
-      N: '0'
-    };
-    instruction.cycles = 2;
-    instruction.bytes = 1;
+      instruction.mnemonic = `ADD HL, ${registerPair}`;
+      instruction.type = instructionTypes.SIXTEEN_BIT_ARITHMETIC_OPERATION;
+      instruction.flags = {
+        CY: '16-bit',
+        H: '16-bit',
+        N: '0',
+      };
+      instruction.cycles = 2;
+      instruction.bytes = 1;
 
-    const opCodeInBinary = `00${registerPairBinaryValues[registerPair]}1001`;
-    instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+      const opCodeInBinary = `00${registerPairBinaryCode}1001`;
+      instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
-    instructions.push(instruction);
-  }
+      instructions.push(instruction);
+    });
 
   return instructions;
-}
+};

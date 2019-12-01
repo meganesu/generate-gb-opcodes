@@ -2,29 +2,30 @@ import convertBinaryStringToHexString from '../../helpers/convert-binary-string-
 import { instructionTypes } from '../constants';
 
 const registerPairBinaryCodes = {
-  "BC": "00",
-  "DE": "01",
-  "HL": "10",
-  "SP": "11"
+  BC: '00',
+  DE: '01',
+  HL: '10',
+  SP: '11',
 };
 
-export const generate_LD_rr_from_d16 = () => {
+export const generate_LD_rr_from_d16 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
-  for (let register of Object.keys(registerPairBinaryCodes)) {
-    const instruction = {};
+  Object.entries(registerPairBinaryCodes)
+    .forEach(([register, registerPairBinaryCode]) => {
+      const instruction = {};
 
-    instruction.mnemonic = `LD ${register}, d16`;
-    instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
-    instruction.flags = {};
-    instruction.cycles = 3;
-    instruction.bytes = 3;
+      instruction.mnemonic = `LD ${register}, d16`;
+      instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
+      instruction.flags = {};
+      instruction.cycles = 3;
+      instruction.bytes = 3;
 
-    const opCodeInBinary = `00${registerPairBinaryCodes[register]}0001`;
-    instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+      const opCodeInBinary = `00${registerPairBinaryCode}0001`;
+      instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
-    instructions.push(instruction);
-  }
+      instructions.push(instruction);
+    });
 
   return instructions;
-}
+};

@@ -1,7 +1,7 @@
-import { instructionTypes } from "../constants";
+import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_JR_s8 = () => {
+export const generate_JR_s8 = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'JR s8'; // jump relative
@@ -14,4 +14,4 @@ export const generate_JR_s8 = () => {
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
   return instruction;
-}
+};

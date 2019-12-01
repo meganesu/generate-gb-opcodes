@@ -1,7 +1,7 @@
-import { instructionTypes } from "../constants";
+import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_RR_memory_at_HL = () => {
+export const generate_RR_memory_at_HL = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'RR (HL)';
@@ -10,8 +10,8 @@ export const generate_RR_memory_at_HL = () => {
     CY: '(HL)0',
     H: '0',
     N: '0',
-    Z: 'Z'
-  }
+    Z: 'Z',
+  };
   instruction.cycles = 4;
   instruction.bytes = 2;
 
@@ -19,4 +19,4 @@ export const generate_RR_memory_at_HL = () => {
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
   return instruction;
-}
+};

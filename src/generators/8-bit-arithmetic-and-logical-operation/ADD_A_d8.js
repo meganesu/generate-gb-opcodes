@@ -1,7 +1,7 @@
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
 
-export const generate_ADD_A_d8 = () => {
+export const generate_ADD_A_d8 = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'ADD A, d8';
@@ -10,7 +10,7 @@ export const generate_ADD_A_d8 = () => {
     CY: '8-bit',
     H: '8-bit',
     N: '0',
-    Z: 'Z'
+    Z: 'Z',
   };
   instruction.cycles = 2;
   instruction.bytes = 2;
@@ -19,4 +19,4 @@ export const generate_ADD_A_d8 = () => {
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
   return instruction;
-}
+};

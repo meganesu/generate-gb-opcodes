@@ -2,7 +2,7 @@ import convertBinaryStringToHexString from '../../helpers/convert-binary-string-
 
 import { instructionTypes } from '../constants';
 
-export const generate_LD_memory_at_a16_from_SP = () => {
+export const generate_LD_memory_at_a16_from_SP = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'LD (a16), SP';

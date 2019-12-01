@@ -2,7 +2,7 @@ import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
 
-export const generate_SBC_A_d8 = () => {
+export const generate_SBC_A_d8 = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'SBC A, d8';
@@ -11,7 +11,7 @@ export const generate_SBC_A_d8 = () => {
     CY: '8-bit',
     H: '8-bit',
     N: '1',
-    Z: 'Z'
+    Z: 'Z',
   };
   instruction.cycles = 2;
   instruction.bytes = 2;

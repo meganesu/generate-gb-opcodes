@@ -5,7 +5,7 @@ describe('instructionGenerators', () => {
   it('contains an array of functions', () => {
     expect(instructionGenerators).toBeInstanceOf(Array);
 
-    instructionGenerators.forEach(generator => {
+    instructionGenerators.forEach((generator) => {
       expect(generator).toBeInstanceOf(Function);
     });
   });
@@ -21,7 +21,7 @@ describe('generateAllInstructions', () => {
   it('returns an array of instruction objects', () => {
     expect(instructions).toBeInstanceOf(Array);
 
-    instructions.forEach(instruction => {
+    instructions.forEach((instruction) => {
       expect(instruction).toBeInstanceOf(Object);
     });
   });
@@ -29,7 +29,7 @@ describe('generateAllInstructions', () => {
   it('builds each instruction object with the correct structure', () => {
     const instructionTypeValues = Object.values(instructionTypes);
 
-    instructions.forEach(instruction => {
+    instructions.forEach((instruction) => {
       expect(typeof instruction.mnemonic).toBe('string');
       expect(instructionTypeValues.includes(instruction.type)).toBe(true);
       expect(instruction.bytes).toBeGreaterThan(0);

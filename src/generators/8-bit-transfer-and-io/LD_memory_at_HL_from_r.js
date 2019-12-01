@@ -2,23 +2,24 @@ import convertBinaryStringToHexString from '../../helpers/convert-binary-string-
 
 import { instructionTypes, registerBinaryCodes } from '../constants';
 
-export const generate_LD_memory_at_HL_from_r = () => {
+export const generate_LD_memory_at_HL_from_r = () => { // eslint-disable-line camelcase
   const instructions = [];
 
-  for (let register of Object.keys(registerBinaryCodes)) {
-    const instruction = {};
+  Object.entries(registerBinaryCodes)
+    .forEach(([register, registerBinaryCode]) => {
+      const instruction = {};
 
-    instruction.mnemonic = `LD (HL), ${register}`;
-    instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
-    instruction.flags = {};
-    instruction.cycles = 2;
-    instruction.bytes = 1;
+      instruction.mnemonic = `LD (HL), ${register}`;
+      instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
+      instruction.flags = {};
+      instruction.cycles = 2;
+      instruction.bytes = 1;
 
-    const opCodeInBinary = `01110${registerBinaryCodes[register]}`;
-    instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+      const opCodeInBinary = `01110${registerBinaryCode}`;
+      instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
-    instructions.push(instruction);
-  }
+      instructions.push(instruction);
+    });
 
   return instructions;
-}
+};

@@ -2,16 +2,16 @@ import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
 
-export const generate_ADC_A_memory_at_HL = () => {
+export const generate_ADC_A_memory_at_HL = () => { // eslint-disable-line camelcase
   const instruction = {};
 
-  instruction.mnemonic = "ADC A, (HL)";
+  instruction.mnemonic = 'ADC A, (HL)';
   instruction.type = instructionTypes.EIGHT_BIT_ARITHMETIC_AND_LOGICAL_OPERATION;
   instruction.flags = {
     CY: '8-bit',
     H: '8-bit',
     N: '0',
-    Z: 'Z'
+    Z: 'Z',
   };
   instruction.cycles = 2;
   instruction.bytes = 1;

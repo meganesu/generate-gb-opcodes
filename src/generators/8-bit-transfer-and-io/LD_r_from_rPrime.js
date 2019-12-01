@@ -3,11 +3,13 @@ import convertBinaryStringToHexString from '../../helpers/convert-binary-string-
 import { instructionTypes, registerBinaryCodes } from '../constants';
 
 // LD r, r'
-export const generate_LD_r_from_rPrime = () => { 
+export const generate_LD_r_from_rPrime = () => { // eslint-disable-line camelcase
   const instructions = [];
 
-  for (let r of Object.keys(registerBinaryCodes)) {
-      for (let rPrime of Object.keys(registerBinaryCodes)) {
+  Object.entries(registerBinaryCodes)
+    .forEach(([r, registerBinaryCode]) => {
+      Object.entries(registerBinaryCodes)
+        .forEach(([rPrime, rPrimeBinaryCode]) => {
           const instruction = {};
 
           instruction.mnemonic = `LD ${r}, ${rPrime}`; // LD A, B
@@ -16,12 +18,12 @@ export const generate_LD_r_from_rPrime = () => {
           instruction.cycles = 1;
           instruction.bytes = 1;
 
-          const opCodeInBinary = `01${registerBinaryCodes[r]}${registerBinaryCodes[rPrime]}`
+          const opCodeInBinary = `01${registerBinaryCode}${rPrimeBinaryCode}`;
           instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
           instructions.push(instruction);
-      }
-  }
+        });
+    });
 
   return instructions;
-}
+};

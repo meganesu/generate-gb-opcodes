@@ -1,7 +1,7 @@
-import { instructionTypes } from "../constants";
+import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_SCF = () => {
+export const generate_SCF = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'SCF';
@@ -19,4 +19,4 @@ export const generate_SCF = () => {
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
   return instruction;
-}
+};

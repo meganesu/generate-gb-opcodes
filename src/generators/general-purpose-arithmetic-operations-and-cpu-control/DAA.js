@@ -1,7 +1,7 @@
-import { instructionTypes } from "../constants";
+import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_DAA = () => {
+export const generate_DAA = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'DAA';
@@ -19,4 +19,4 @@ export const generate_DAA = () => {
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
   return instruction;
-}
+};

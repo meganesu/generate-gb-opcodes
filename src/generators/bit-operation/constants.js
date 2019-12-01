@@ -1,4 +1,4 @@
-export const bitBinaryValues = {
+export const bitBinaryCodes = {
   0: '000',
   1: '001',
   2: '010',
