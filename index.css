@@ -1,5 +1,6 @@
 body {
   width: max-content;
+  font-family: sans-serif;
 }
 
 .op-code-table {
@@ -84,7 +85,6 @@ span.bytes, span.cycles {
 
 #details-sidebar {
   position: fixed;
-  float: right;
   top: 0;
   right: 0px;
   width: 40%;
@@ -95,6 +95,11 @@ span.bytes, span.cycles {
   padding: 20px;
 }
 
-#details-sidebar button {
-  float: right;
+#details-sidebar h3 {
+  margin: 0;
+}
+
+#sidebar-header {
+  display: flex;
+  justify-content: space-between;
 }
