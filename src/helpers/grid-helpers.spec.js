@@ -6,11 +6,11 @@ describe('Grid helpers', () => {
       const result = createInitialOpCodesGrid();
 
       expect(result).toBeInstanceOf(Array);
-      expect(result.length).toEqual(16);
+      expect(result).toHaveLength(16);
 
-      result.forEach(row => {
+      result.forEach(() => {
         expect(result).toBeInstanceOf(Array);
-        expect(result.length).toEqual(16);
+        expect(result).toHaveLength(16);
       });
     });
   });
@@ -30,9 +30,9 @@ describe('Grid helpers', () => {
           mnemonic: 'fake',
           flags: {},
           cycles: 1,
-        }
+        };
         setCellForOpCode(instruction.opCode, instruction, grids);
-  
+
         expect(grids[0][8][10]).toEqual(instruction);
       });
     });
@@ -44,9 +44,9 @@ describe('Grid helpers', () => {
           mnemonic: 'fake',
           flags: {},
           cycles: 1,
-        }
+        };
         setCellForOpCode(instruction.opCode, instruction, grids);
-  
+
         expect(grids[1][8][10]).toEqual(instruction);
       });
     });
@@ -61,7 +61,7 @@ describe('Grid helpers', () => {
       let consoleSpy;
 
       beforeEach(() => {
-        consoleSpy = jest.spyOn(console, "error").mockImplementation();
+        consoleSpy = jest.spyOn(console, 'error').mockImplementation();
         setCellForOpCode(instruction.opCode, instruction, grids);
         setCellForOpCode(instruction.opCode, {}, grids);
       });
@@ -75,6 +75,7 @@ describe('Grid helpers', () => {
       });
 
       it('outputs an error message', () => {
+        /* eslint-disable-next-line no-console */
         expect(console.error).toBeCalled();
       });
     });

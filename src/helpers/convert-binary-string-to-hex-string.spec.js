@@ -1,4 +1,4 @@
-import { convertBinaryStringToHexString } from './convert-binary-string-to-hex-string';
+import convertBinaryStringToHexString from './convert-binary-string-to-hex-string';
 
 describe('convertBinaryStringToHexString', () => {
   it('converts a string from binary to hex correctly', () => {
