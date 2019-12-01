@@ -1,4 +1,7 @@
-const DetailsSidebar = ({activeInstruction, hideSidebar}) => (
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const DetailsSidebar = ({ activeInstruction, hideSidebar }) => (
   <div id="details-sidebar">
     <div id="sidebar-header">
       <h3>
@@ -6,6 +9,7 @@ const DetailsSidebar = ({activeInstruction, hideSidebar}) => (
       </h3>
       <button
         id="close-sidebar"
+        type="button"
         aria-label="close details sidebar"
         onClick={hideSidebar}
       >
@@ -14,7 +18,7 @@ const DetailsSidebar = ({activeInstruction, hideSidebar}) => (
     </div>
     <section>
       <ul>
-        <li>Opcode: 0x{activeInstruction.opCode}</li>
+        <li>{`Opcode: 0x${activeInstruction.opCode}`}</li>
         <li>Description: Coming Soon</li>
       </ul>
     </section>
@@ -22,3 +26,11 @@ const DetailsSidebar = ({activeInstruction, hideSidebar}) => (
 );
 
 export default DetailsSidebar;
+
+DetailsSidebar.propTypes = {
+  activeInstruction: PropTypes.shape({
+    mnemonic: PropTypes.string,
+    opCode: PropTypes.string,
+  }).isRequired,
+  hideSidebar: PropTypes.func.isRequired,
+};

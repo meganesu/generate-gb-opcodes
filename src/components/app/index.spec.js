@@ -1,7 +1,8 @@
+import React from 'react';
+import { mount } from 'enzyme';
 import App from '.';
 import OpCodeTable from '../op-code-table';
 import DetailsSidebar from '../details-sidebar';
-import { mount } from 'enzyme';
 import * as generators from '../../generators';
 import * as gridHelpers from '../../helpers/grid-helpers';
 
@@ -43,14 +44,13 @@ describe('App', () => {
 
   it('does not render DetailsSidebar', () => {
     expect(component.find(DetailsSidebar)).toHaveLength(0);
-  })
+  });
 
   describe('when InstructionCell in OpCodeTable is clicked', () => {
     let instructionClicked;
 
     beforeAll(() => {
       const instructionCells = component.find('InstructionCell');
-      expect(instructionCells.length).toBeGreaterThan(1);
       instructionCells.first().find('button').simulate('click');
       instructionClicked = instructionCells.first().prop('instruction');
     });
@@ -64,12 +64,11 @@ describe('App', () => {
 
     describe('when close sidebar button is clicked', () => {
       beforeAll(() => {
-        expect(component.find('DetailsSidebar')).toHaveLength(1);
         component.find('DetailsSidebar button').simulate('click');
       });
       it('hides the DetailsSidebar', () => {
         expect(component.find('DetailsSidebar')).toHaveLength(0);
       });
     });
-  })
+  });
 });

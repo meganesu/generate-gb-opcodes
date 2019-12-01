@@ -1,3 +1,4 @@
+import React from 'react';
 import { mount } from 'enzyme';
 import InstructionCell from '.';
 
@@ -15,7 +16,7 @@ describe('InstructionCell', () => {
     },
     cycles: '4',
     bytes: 3,
-  }
+  };
 
   const clickStub = jest.fn();
 
@@ -30,14 +31,14 @@ describe('InstructionCell', () => {
             />
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
   });
   it('renders a td element with the instruction class', () => {
     expect(component.find('td')).toHaveLength(1);
     expect(component.find('.instruction')).toHaveLength(1);
   });
-  
+
   it('renders the instruction mnemonic', () => {
     expect(component.find('.mnemonic')).toHaveLength(1);
     expect(component.find('.mnemonic').text()).toEqual(instruction.mnemonic);
@@ -45,9 +46,7 @@ describe('InstructionCell', () => {
 
   it('adds the instruction type as a class name', () => {
     expect(component.find(`.${instruction.type}`)).toHaveLength(1);
-  })
-
-  it.todo('adds a visually hidden instruction type (for screen readers)')
+  });
 
   it('renders the number of bytes', () => {
     expect(component.find('.bytes')).toHaveLength(1);
@@ -63,11 +62,10 @@ describe('InstructionCell', () => {
 
   describe('when clicked', () => {
     beforeAll(() => {
-      expect(component.find('button')).toHaveLength(1);
       component.find('button').simulate('click');
     });
     it('calls the click handler from props', () => {
       expect(clickStub.mock.calls).toHaveLength(1);
-    })
-  })
+    });
+  });
 });
