@@ -9,8 +9,8 @@ const generate_HL_from_SP_plus_s8 = () => { // eslint-disable-line camelcase
   instruction.flags = {
     CY: '16-bit',
     H: '16-bit',
-    N: 0,
-    Z: 0,
+    N: '0',
+    Z: '0',
   };
   instruction.cycles = '3';
   instruction.bytes = 2;

@@ -14,7 +14,6 @@ const generate_BIT_b1_r8 = () => { // eslint-disable-line camelcase
           instruction.mnemonic = `BIT ${bit}, ${register}`;
           instruction.type = instructionTypes.BIT_OPERATION;
           instruction.flags = {
-            CY: '',
             H: '1',
             N: '0',
             Z: '!rb',

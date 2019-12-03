@@ -7,10 +7,8 @@ const generate_CPL = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'CPL';
   instruction.type = instructionTypes.GENERAL_PURPOSE_ARITHMETIC_OPERATIONS_AND_CPU_CONTROL;
   instruction.flags = {
-    CY: '-',
     H: '1',
     N: '1',
-    Z: '-',
   };
   instruction.cycles = '1';
   instruction.bytes = 1;

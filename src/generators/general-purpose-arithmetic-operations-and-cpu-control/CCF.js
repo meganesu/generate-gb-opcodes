@@ -10,7 +10,6 @@ const generate_CCF = () => { // eslint-disable-line camelcase
     CY: '!CY',
     H: '0',
     N: '0',
-    Z: '-',
   };
   instruction.cycles = '1';
   instruction.bytes = 1;

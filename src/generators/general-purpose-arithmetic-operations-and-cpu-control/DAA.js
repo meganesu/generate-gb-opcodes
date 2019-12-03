@@ -9,7 +9,6 @@ const generate_DAA = () => { // eslint-disable-line camelcase
   instruction.flags = {
     CY: 'CY',
     H: '0',
-    N: '-',
     Z: 'Z',
   };
   instruction.cycles = '1';

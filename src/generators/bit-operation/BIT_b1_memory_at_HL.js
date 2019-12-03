@@ -12,7 +12,6 @@ const generate_BIT_b1_memory_at_HL = () => { // eslint-disable-line camelcase
       instruction.mnemonic = `BIT ${bit}, (HL)`;
       instruction.type = instructionTypes.BIT_OPERATION;
       instruction.flags = {
-        CY: '',
         H: '1',
         N: '0',
         Z: '!(HL)b',
