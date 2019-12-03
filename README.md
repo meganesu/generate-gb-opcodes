@@ -19,3 +19,4 @@ This is a bit of a side project that came out of my attempt to make a Game Boy e
 ## Credits
 
 * [Gameboy Development Manual v1.1](https://archive.org/details/GameBoyProgManVer1.1) - I used this to create the generator functions for the different permutations of each mnemonic.
+* [Gameboy CPU (LR35902) instruction set](http://www.pastraiser.com/cpu/gameboy/gameboy_opcodes.html) - This is the original site that inspired this project.
