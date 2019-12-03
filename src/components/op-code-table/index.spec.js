@@ -35,7 +35,7 @@ describe('OpCodeTable', () => {
     for (let i = 0; i < grid.length; i += 1) {
       grid[i] = new Array(16);
       for (let j = 0; j < grid[i].length; j += 1) {
-        grid[i][j] = '';
+        grid[i][j] = {};
       }
     }
 

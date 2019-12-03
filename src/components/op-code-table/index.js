@@ -21,7 +21,7 @@ const OpCodeTable = ({ opCodesGrid, caption, setActiveInstruction }) => (
           <th scope="row">{`${rowIndex.toString(16).toUpperCase()}x`}</th>
           {gridRow.map((gridCell, columnIndex) => {
             const cellKey = `${rowIndex}${columnIndex}`;
-            const doesCellContainInstruction = typeof gridCell === 'object';
+            const doesCellContainInstruction = Object.keys(gridCell).length > 0;
 
             if (doesCellContainInstruction) {
               return (

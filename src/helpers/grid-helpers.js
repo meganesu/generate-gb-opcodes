@@ -27,7 +27,7 @@ export const createInitialOpCodesGrid = () => {
   for (let i = 0; i < grid.length; i += 1) {
     grid[i] = new Array(16);
     for (let j = 0; j < grid[i].length; j += 1) {
-      grid[i][j] = '';
+      grid[i][j] = {};
     }
   }
 
@@ -50,7 +50,8 @@ export const setCellForOpCode = (opCodeString, value, grids) => {
   const row = msbValue;
   const column = lsbValue;
 
-  if (grids[indexOfGridToUpdate][msbValue][lsbValue]) {
+  const cellContainsInstruction = Object.keys(grids[indexOfGridToUpdate][msbValue][lsbValue]).length > 0;
+  if (cellContainsInstruction) {
     /* eslint-disable no-console */
     console.error('ERROR: Tried to set cell for', opCodeString, 'but instruction for that op code already exists!');
     console.error('Tried to write', value, 'over existing value', grids[indexOfGridToUpdate][row][column]);
