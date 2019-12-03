@@ -5,6 +5,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "build-dev": "webpack --config webpack.dev.js",
+    "lint": "eslint src",
     "test": "jest"
   },
   "repository": {
