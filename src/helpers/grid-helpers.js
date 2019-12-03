@@ -50,7 +50,8 @@ export const setCellForOpCode = (opCodeString, value, grids) => {
   const row = msbValue;
   const column = lsbValue;
 
-  const cellContainsInstruction = Object.keys(grids[indexOfGridToUpdate][msbValue][lsbValue]).length > 0;
+  const currentContentsOfCell = grids[indexOfGridToUpdate][msbValue][lsbValue];
+  const cellContainsInstruction = Object.keys(currentContentsOfCell).length > 0;
   if (cellContainsInstruction) {
     /* eslint-disable no-console */
     console.error('ERROR: Tried to set cell for', opCodeString, 'but instruction for that op code already exists!');
