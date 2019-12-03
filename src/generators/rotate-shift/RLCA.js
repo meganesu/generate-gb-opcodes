@@ -12,7 +12,7 @@ const generate_RLCA = () => { // eslint-disable-line camelcase
     N: '0',
     Z: '0',
   };
-  instruction.cycles = 1;
+  instruction.cycles = '1';
   instruction.bytes = 1;
 
   const opCodeInBinary = '00000111';

@@ -8,7 +8,7 @@ const generate_LD_memory_at_a16_from_SP = () => { // eslint-disable-line camelca
   instruction.mnemonic = 'LD (a16), SP';
   instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
   instruction.flags = {};
-  instruction.cycles = 5;
+  instruction.cycles = '5';
   instruction.bytes = 3;
 
   const opCodeInBinary = '00001000';

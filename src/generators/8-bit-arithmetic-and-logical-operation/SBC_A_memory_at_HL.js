@@ -12,7 +12,7 @@ const generate_SBC_A_memory_at_HL = () => { // eslint-disable-line camelcase
     N: '1',
     Z: 'Z',
   };
-  instruction.cycles = 2;
+  instruction.cycles = '2';
   instruction.bytes = 1;
 
   const opCodeInBinary = '10011110';

@@ -7,7 +7,7 @@ const generate_JR_s8 = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'JR s8'; // jump relative
   instruction.type = instructionTypes.JUMP;
   instruction.flags = {};
-  instruction.cycles = 3;
+  instruction.cycles = '3';
   instruction.bytes = 2;
 
   const opCodeInBinary = '00011000';

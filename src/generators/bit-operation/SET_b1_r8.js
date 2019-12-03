@@ -14,7 +14,7 @@ const generate_SET_b1_r8 = () => { // eslint-disable-line camelcase
           instruction.mnemonic = `SET ${bit}, ${register}`;
           instruction.type = instructionTypes.BIT_OPERATION;
           instruction.flags = {};
-          instruction.cycles = 2;
+          instruction.cycles = '2';
           instruction.bytes = 2;
 
           const opCodeInBinary = `1100101111${bitBinaryCode}${registerBinaryCode}`;

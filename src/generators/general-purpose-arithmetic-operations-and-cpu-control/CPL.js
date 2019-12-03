@@ -12,7 +12,7 @@ const generate_CPL = () => { // eslint-disable-line camelcase
     N: '1',
     Z: '-',
   };
-  instruction.cycles = 1;
+  instruction.cycles = '1';
   instruction.bytes = 1;
 
   const opCodeInBinary = '00101111';

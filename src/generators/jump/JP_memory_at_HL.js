@@ -7,7 +7,7 @@ const generate_JP_memory_at_HL = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'JP (HL)';
   instruction.type = instructionTypes.JUMP;
   instruction.flags = {};
-  instruction.cycles = 1;
+  instruction.cycles = '1';
   instruction.bytes = 1;
 
   const opCodeInBinary = '11101001';

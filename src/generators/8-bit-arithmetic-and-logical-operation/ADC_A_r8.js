@@ -16,7 +16,7 @@ const generate_ADC_A_r8 = () => { // eslint-disable-line camelcase
         N: '0',
         Z: 'Z',
       };
-      instruction.cycles = 2;
+      instruction.cycles = '2';
       instruction.bytes = 1;
 
       const opCodeInBinary = `10001${registerBinaryCode}`;

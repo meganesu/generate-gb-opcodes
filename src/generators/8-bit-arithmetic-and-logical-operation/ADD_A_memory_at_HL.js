@@ -12,7 +12,7 @@ const generate_ADD_A_memory_at_HL = () => { // eslint-disable-line camelcase
     N: '0',
     Z: 'Z',
   };
-  instruction.cycles = 2;
+  instruction.cycles = '2';
   instruction.bytes = 1;
 
   const opCodeInBinary = '10000110';

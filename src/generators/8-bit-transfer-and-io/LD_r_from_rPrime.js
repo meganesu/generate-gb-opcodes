@@ -15,7 +15,7 @@ const generate_LD_r_from_rPrime = () => { // eslint-disable-line camelcase
           instruction.mnemonic = `LD ${r}, ${rPrime}`; // LD A, B
           instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
           instruction.flags = {};
-          instruction.cycles = 1;
+          instruction.cycles = '1';
           instruction.bytes = 1;
 
           const opCodeInBinary = `01${registerBinaryCode}${rPrimeBinaryCode}`;

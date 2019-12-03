@@ -12,7 +12,7 @@ const generate_SLA_memory_at_HL = () => { // eslint-disable-line camelcase
     N: '0',
     Z: 'Z',
   };
-  instruction.cycles = 4;
+  instruction.cycles = '4';
   instruction.bytes = 2;
 
   const opCodeInBinary = '1100101100100110';

@@ -16,7 +16,7 @@ const generate_ADD_HL_r16 = () => { // eslint-disable-line camelcase
         H: '16-bit',
         N: '0',
       };
-      instruction.cycles = 2;
+      instruction.cycles = '2';
       instruction.bytes = 1;
 
       const opCodeInBinary = `00${registerPairBinaryCode}1001`;

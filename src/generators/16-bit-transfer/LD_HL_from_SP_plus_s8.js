@@ -12,7 +12,7 @@ const generate_HL_from_SP_plus_s8 = () => { // eslint-disable-line camelcase
     N: 0,
     Z: 0,
   };
-  instruction.cycles = 3;
+  instruction.cycles = '3';
   instruction.bytes = 2;
 
   const opCodeInBinary = '11111000';

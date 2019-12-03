@@ -11,7 +11,7 @@ const generate_INC_memory_at_HL = () => { // eslint-disable-line camelcase
     N: '0',
     Z: 'Z',
   };
-  instruction.cycles = 3;
+  instruction.cycles = '3';
   instruction.bytes = 1;
 
   const opCodeInBinary = '00110100';

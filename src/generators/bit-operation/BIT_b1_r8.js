@@ -19,7 +19,7 @@ const generate_BIT_b1_r8 = () => { // eslint-disable-line camelcase
             N: '0',
             Z: '!rb',
           };
-          instruction.cycles = 2;
+          instruction.cycles = '2';
           instruction.bytes = 2;
 
           const opCodeInBinary = `1100101101${bitBinaryCode}${registerBinaryCode}`;

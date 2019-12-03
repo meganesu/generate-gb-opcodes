@@ -7,7 +7,7 @@ const generate_NOP = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'NOP';
   instruction.type = instructionTypes.GENERAL_PURPOSE_ARITHMETIC_OPERATIONS_AND_CPU_CONTROL;
   instruction.flags = {};
-  instruction.cycles = 1;
+  instruction.cycles = '1';
   instruction.bytes = 1;
 
   const opCodeInBinary = '00000000';

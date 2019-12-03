@@ -19,7 +19,7 @@ const generate_PUSH_rr = () => { // eslint-disable-line camelcase
       instruction.mnemonic = `PUSH ${register}`;
       instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
       instruction.flags = {};
-      instruction.cycles = 4;
+      instruction.cycles = '4';
       instruction.bytes = 1;
 
       const opCodeInBinary = `11${registerPairBinaryCode}0101`;

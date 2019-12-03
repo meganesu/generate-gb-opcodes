@@ -12,7 +12,7 @@ const generate_CP_d8 = () => { // eslint-disable-line camelcase
     N: '1',
     Z: 'Z',
   };
-  instruction.cycles = 2;
+  instruction.cycles = '2';
   instruction.bytes = 2;
 
   const opCodeInBinary = '11111110';

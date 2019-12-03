@@ -12,7 +12,7 @@ const generate_RES_b1_memory_at_HL = () => { // eslint-disable-line camelcase
       instruction.mnemonic = `RES ${bit}, (HL)`;
       instruction.type = instructionTypes.BIT_OPERATION;
       instruction.flags = {};
-      instruction.cycles = 4;
+      instruction.cycles = '4';
       instruction.bytes = 2;
 
       const opCodeInBinary = `1100101110${bitBinaryCode}110`;

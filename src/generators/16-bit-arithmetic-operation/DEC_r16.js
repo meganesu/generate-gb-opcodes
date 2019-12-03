@@ -12,7 +12,7 @@ const generate_DEC_r16 = () => { // eslint-disable-line camelcase
       instruction.mnemonic = `DEC ${registerPair}`;
       instruction.type = instructionTypes.SIXTEEN_BIT_ARITHMETIC_OPERATION;
       instruction.flags = {};
-      instruction.cycles = 2;
+      instruction.cycles = '2';
       instruction.bytes = 1;
 
       const opCodeInBinary = `00${registerPairBinaryCode}1011`;

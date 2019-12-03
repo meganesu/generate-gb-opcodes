@@ -7,7 +7,7 @@ const generate_LD_A_from_memory_at_C = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'LD A, (C)';
   instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
   instruction.flags = {};
-  instruction.cycles = 2;
+  instruction.cycles = '2';
   instruction.bytes = 1;
 
   const opCodeInBinary = '11110010';

@@ -7,7 +7,7 @@ const generate_LD_SP_from_HL = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'LD SP, HL';
   instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
   instruction.flags = {};
-  instruction.cycles = 2;
+  instruction.cycles = '2';
   instruction.bytes = 1;
 
   const opCodeInBinary = '11111001';

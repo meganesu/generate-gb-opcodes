@@ -7,7 +7,7 @@ const generate_HALT = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'HALT';
   instruction.type = instructionTypes.GENERAL_PURPOSE_ARITHMETIC_OPERATIONS_AND_CPU_CONTROL;
   instruction.flags = {};
-  instruction.cycles = 1;
+  instruction.cycles = '1';
   instruction.bytes = 1;
 
   const opCodeInBinary = '01110110';

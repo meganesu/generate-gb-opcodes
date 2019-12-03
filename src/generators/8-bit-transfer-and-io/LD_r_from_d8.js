@@ -12,7 +12,7 @@ const generate_LD_r_from_d8 = () => { // eslint-disable-line camelcase
       instruction.mnemonic = `LD ${register}, d8`;
       instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
       instruction.flags = {};
-      instruction.cycles = 2;
+      instruction.cycles = '2';
       instruction.bytes = 2;
 
       const opCodeInBinary = `00${registerBinaryCode}110`;

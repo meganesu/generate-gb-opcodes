@@ -12,7 +12,7 @@ const generate_ADD_SP_s8 = () => { // eslint-disable-line camelcase
     N: '0',
     Z: '0',
   };
-  instruction.cycles = 4;
+  instruction.cycles = '4';
   instruction.bytes = 2;
 
   const opCodeInBinary = '11101000';

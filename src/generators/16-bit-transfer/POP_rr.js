@@ -19,7 +19,7 @@ const generate_POP_rr = () => { // eslint-disable-line camelcase
       instruction.mnemonic = `POP ${register}`;
       instruction.type = instructionTypes.SIXTEEN_BIT_TRANSFER;
       instruction.flags = {};
-      instruction.cycles = 3;
+      instruction.cycles = '3';
       instruction.bytes = 1;
 
       const opCodeInBinary = `11${registerPairBinaryCode}0001`;

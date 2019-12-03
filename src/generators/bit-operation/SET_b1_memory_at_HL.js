@@ -12,7 +12,7 @@ const generate_SET_b1_memory_at_HL = () => { // eslint-disable-line camelcase
       instruction.mnemonic = `SET ${bit}, (HL)`;
       instruction.type = instructionTypes.BIT_OPERATION;
       instruction.flags = {};
-      instruction.cycles = 4;
+      instruction.cycles = '4';
       instruction.bytes = 2;
 
       const opCodeInBinary = `1100101111${bitBinaryCode}110`;

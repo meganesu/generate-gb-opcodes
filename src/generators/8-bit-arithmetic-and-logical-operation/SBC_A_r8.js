@@ -16,7 +16,7 @@ const generate_SBC_A_r8 = () => { // eslint-disable-line camelcase
         N: '1',
         Z: 'Z',
       };
-      instruction.cycles = 1;
+      instruction.cycles = '1';
       instruction.bytes = 1;
 
       const opCodeInBinary = `10011${registerBinaryCode}`;

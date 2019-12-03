@@ -7,7 +7,7 @@ const generate_RET = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'RET';
   instruction.type = instructionTypes.CALL_AND_RETURN;
   instruction.flags = {};
-  instruction.cycles = 4;
+  instruction.cycles = '4';
   instruction.bytes = 1;
 
   const opCodeInBinary = '11001001';

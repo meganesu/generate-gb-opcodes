@@ -26,7 +26,7 @@ const generate_ADD_A_r8 = () => { // eslint-disable-line camelcase
         N: '0',
         Z: 'Z',
       };
-      instruction.cycles = 1;
+      instruction.cycles = '1';
       instruction.bytes = 1;
 
       const opCodeInBinary = `10000${registerBinaryCode}`;

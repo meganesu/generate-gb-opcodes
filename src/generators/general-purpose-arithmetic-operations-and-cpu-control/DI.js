@@ -7,7 +7,7 @@ const generate_DI = () => { // eslint-disable-line camelcase
   instruction.mnemonic = 'DI';
   instruction.type = instructionTypes.GENERAL_PURPOSE_ARITHMETIC_OPERATIONS_AND_CPU_CONTROL;
   instruction.flags = {};
-  instruction.cycles = 1;
+  instruction.cycles = '1';
   instruction.bytes = 1;
 
   const opCodeInBinary = '11110011';

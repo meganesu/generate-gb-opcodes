@@ -7,7 +7,7 @@ const generate_LD_memory_at_HL_from_d8 = () => { // eslint-disable-line camelcas
   instruction.mnemonic = 'LD (HL), d8';
   instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
   instruction.flags = {};
-  instruction.cycles = 3;
+  instruction.cycles = '3';
   instruction.bytes = 1;
 
   const opCodeInBinary = '00110110';
