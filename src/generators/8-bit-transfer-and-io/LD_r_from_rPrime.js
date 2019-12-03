@@ -3,7 +3,7 @@ import convertBinaryStringToHexString from '../../helpers/convert-binary-string-
 import { instructionTypes, registerBinaryCodes } from '../constants';
 
 // LD r, r'
-export const generate_LD_r_from_rPrime = () => { // eslint-disable-line camelcase
+const generate_LD_r_from_rPrime = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(registerBinaryCodes)
@@ -27,3 +27,5 @@ export const generate_LD_r_from_rPrime = () => { // eslint-disable-line camelcas
 
   return instructions;
 };
+
+export default generate_LD_r_from_rPrime; // eslint-disable-line camelcase

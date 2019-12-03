@@ -1,6 +1,8 @@
-export const registerPairBinaryCodes = {
+const registerPairBinaryCodes = {
   BC: '00',
   DE: '01',
   HL: '10',
   SP: '11',
 };
+
+export default registerPairBinaryCodes;

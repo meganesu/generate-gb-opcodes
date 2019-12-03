@@ -11,7 +11,7 @@ const registerBinaryCodes = {
   L: '101',
 };
 
-export const generate_ADD_A_r8 = () => { // eslint-disable-line camelcase
+const generate_ADD_A_r8 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(registerBinaryCodes)
@@ -37,3 +37,5 @@ export const generate_ADD_A_r8 = () => { // eslint-disable-line camelcase
 
   return instructions;
 };
+
+export default generate_ADD_A_r8; // eslint-disable-line camelcase

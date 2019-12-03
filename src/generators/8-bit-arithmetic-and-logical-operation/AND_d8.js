@@ -1,8 +1,7 @@
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-
-export const generate_AND_d8 = () => { // eslint-disable-line camelcase
+const generate_AND_d8 = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'AND d8';
@@ -21,3 +20,5 @@ export const generate_AND_d8 = () => { // eslint-disable-line camelcase
 
   return instruction;
 };
+
+export default generate_AND_d8; // eslint-disable-line camelcase

@@ -8,7 +8,7 @@ const registerPairBinaryCodes = {
   SP: '11',
 };
 
-export const generate_LD_rr_from_d16 = () => { // eslint-disable-line camelcase
+const generate_LD_rr_from_d16 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(registerPairBinaryCodes)
@@ -29,3 +29,5 @@ export const generate_LD_rr_from_d16 = () => { // eslint-disable-line camelcase
 
   return instructions;
 };
+
+export default generate_LD_rr_from_d16; // eslint-disable-line camelcase

@@ -1,7 +1,7 @@
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
 
-export const generate_ADD_A_d8 = () => { // eslint-disable-line camelcase
+const generate_ADD_A_d8 = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'ADD A, d8';
@@ -20,3 +20,5 @@ export const generate_ADD_A_d8 = () => { // eslint-disable-line camelcase
 
   return instruction;
 };
+
+export default generate_ADD_A_d8; // eslint-disable-line camelcase

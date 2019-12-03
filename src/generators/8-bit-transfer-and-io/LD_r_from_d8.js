@@ -2,7 +2,7 @@ import convertBinaryStringToHexString from '../../helpers/convert-binary-string-
 
 import { instructionTypes, registerBinaryCodes } from '../constants';
 
-export const generate_LD_r_from_d8 = () => { // eslint-disable-line camelcase
+const generate_LD_r_from_d8 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(registerBinaryCodes)
@@ -23,3 +23,5 @@ export const generate_LD_r_from_d8 = () => { // eslint-disable-line camelcase
 
   return instructions;
 };
+
+export default generate_LD_r_from_d8; // eslint-disable-line camelcase

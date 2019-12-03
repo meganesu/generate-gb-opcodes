@@ -9,7 +9,7 @@ const registerPairBinaryCodes = {
   AF: '11',
 };
 
-export const generate_PUSH_rr = () => { // eslint-disable-line camelcase
+const generate_PUSH_rr = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(registerPairBinaryCodes)
@@ -30,3 +30,5 @@ export const generate_PUSH_rr = () => { // eslint-disable-line camelcase
 
   return instructions;
 };
+
+export default generate_PUSH_rr; // eslint-disable-line camelcase

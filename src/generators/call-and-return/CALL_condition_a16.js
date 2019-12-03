@@ -1,7 +1,7 @@
 import { instructionTypes, conditions } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_CALL_condition_a16 = () => { // eslint-disable-line camelcase
+const generate_CALL_condition_a16 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(conditions)
@@ -22,3 +22,5 @@ export const generate_CALL_condition_a16 = () => { // eslint-disable-line camelc
 
   return instructions;
 };
+
+export default generate_CALL_condition_a16; // eslint-disable-line camelcase

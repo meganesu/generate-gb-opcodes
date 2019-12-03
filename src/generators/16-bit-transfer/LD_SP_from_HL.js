@@ -1,7 +1,7 @@
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
 
-export const generate_LD_SP_from_HL = () => { // eslint-disable-line camelcase
+const generate_LD_SP_from_HL = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'LD SP, HL';
@@ -15,3 +15,5 @@ export const generate_LD_SP_from_HL = () => { // eslint-disable-line camelcase
 
   return instruction;
 };
+
+export default generate_LD_SP_from_HL; // eslint-disable-line camelcase

@@ -1,8 +1,7 @@
 import { instructionTypes, registerBinaryCodes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-
-export const generate_SBC_A_r8 = () => { // eslint-disable-line camelcase
+const generate_SBC_A_r8 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(registerBinaryCodes)
@@ -28,3 +27,5 @@ export const generate_SBC_A_r8 = () => { // eslint-disable-line camelcase
 
   return instructions;
 };
+
+export default generate_SBC_A_r8; // eslint-disable-line camelcase

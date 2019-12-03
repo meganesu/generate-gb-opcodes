@@ -1,4 +1,4 @@
-export const bitBinaryCodes = {
+const bitBinaryCodes = {
   0: '000',
   1: '001',
   2: '010',
@@ -8,3 +8,5 @@ export const bitBinaryCodes = {
   6: '110',
   7: '111',
 };
+
+export default bitBinaryCodes;

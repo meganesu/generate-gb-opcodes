@@ -1,7 +1,7 @@
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_RETI = () => { // eslint-disable-line camelcase
+const generate_RETI = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'RETI';
@@ -15,3 +15,5 @@ export const generate_RETI = () => { // eslint-disable-line camelcase
 
   return instruction;
 };
+
+export default generate_RETI; // eslint-disable-line camelcase

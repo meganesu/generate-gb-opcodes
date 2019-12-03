@@ -1,8 +1,8 @@
 import { registerBinaryCodes, instructionTypes } from '../constants';
-import { bitBinaryCodes } from './constants';
+import bitBinaryCodes from './constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_BIT_b1_r8 = () => { // eslint-disable-line camelcase
+const generate_BIT_b1_r8 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(bitBinaryCodes)
@@ -31,3 +31,5 @@ export const generate_BIT_b1_r8 = () => { // eslint-disable-line camelcase
 
   return instructions;
 };
+
+export default generate_BIT_b1_r8; // eslint-disable-line camelcase

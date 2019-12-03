@@ -1,7 +1,7 @@
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
-export const generate_SRL_memory_at_HL = () => { // eslint-disable-line camelcase
+const generate_SRL_memory_at_HL = () => { // eslint-disable-line camelcase
   const instruction = {};
 
   instruction.mnemonic = 'SRL (HL)';
@@ -20,3 +20,5 @@ export const generate_SRL_memory_at_HL = () => { // eslint-disable-line camelcas
 
   return instruction;
 };
+
+export default generate_SRL_memory_at_HL; // eslint-disable-line camelcase
