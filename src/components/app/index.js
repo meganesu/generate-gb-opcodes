@@ -26,18 +26,20 @@ const App = () => {
 
   return (
     <>
-      <h2>8-bit op codes</h2>
-      <OpCodeTable
-        opCodesGrid={grids[0]}
-        caption="Game Boy CPU instructions, organized by op code"
-        setActiveInstruction={updateSidebar}
-      />
-      <h2>16-bit op codes, where the first 8 bits are 0xCB</h2>
-      <OpCodeTable
-        opCodesGrid={grids[1]}
-        caption='Game Boy CPU instructions for op codes prefixed by "CB"'
-        setActiveInstruction={updateSidebar}
-      />
+      <main role="main">
+        <h2>8-bit op codes</h2>
+        <OpCodeTable
+          opCodesGrid={grids[0]}
+          caption="Game Boy CPU instructions, organized by op code"
+          setActiveInstruction={updateSidebar}
+        />
+        <h2>16-bit op codes, where the first 8 bits are 0xCB</h2>
+        <OpCodeTable
+          opCodesGrid={grids[1]}
+          caption='Game Boy CPU instructions for op codes prefixed by "CB"'
+          setActiveInstruction={updateSidebar}
+        />
+      </main>
       { showSidebar
         && (
           <DetailsSidebar
