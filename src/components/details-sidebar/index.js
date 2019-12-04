@@ -40,6 +40,15 @@ export default DetailsSidebar;
 DetailsSidebar.propTypes = {
   activeInstruction: PropTypes.shape({
     mnemonic: PropTypes.string,
+    type: PropTypes.string,
+    bytes: PropTypes.number,
+    cycles: PropTypes.string,
+    flags: PropTypes.shape({
+      Z: PropTypes.string,
+      N: PropTypes.string,
+      H: PropTypes.string,
+      CY: PropTypes.string,
+    }),
     opCode: PropTypes.string,
   }).isRequired,
   hideSidebar: PropTypes.func.isRequired,

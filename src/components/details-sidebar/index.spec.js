@@ -35,10 +35,10 @@ describe('DetailsSidebar', () => {
   it('renders the instruction details', () => {
     const sidebarText = component.text();
     expect(sidebarText).toContain(activeInstruction.mnemonic);
-    expect(sidebarText).toContain("Number of Bytes");
-    expect(sidebarText).toContain("Number of Cycles");
-    expect(sidebarText).toContain("Flags");
-  })
+    expect(sidebarText).toContain('Number of Bytes');
+    expect(sidebarText).toContain('Number of Cycles');
+    expect(sidebarText).toContain('Flags');
+  });
 
   describe('when the close button is clicked', () => {
     beforeAll(() => {
