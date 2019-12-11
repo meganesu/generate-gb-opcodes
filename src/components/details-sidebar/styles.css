@@ -1,4 +1,4 @@
-#details-sidebar {
+.sidebar {
   position: fixed;
   top: 0;
   right: 0px;
@@ -10,11 +10,12 @@
   padding: 20px;
 }
 
-#details-sidebar h3 {
-  margin: 0;
-}
-
-#sidebar-header {
+.header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
+import styles from './styles.css';
 
 const DetailsSidebar = ({
   activeInstruction: {
@@ -17,9 +17,9 @@ const DetailsSidebar = ({
   },
   hideSidebar,
 }) => (
-  <aside id="details-sidebar">
-    <div id="sidebar-header">
-      <h3>
+  <aside id="details-sidebar" className={styles.sidebar}>
+    <div id="sidebar-header" className={styles.header}>
+      <h3 className={styles.title}>
         {mnemonic}
       </h3>
       <button
