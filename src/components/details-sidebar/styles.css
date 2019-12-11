@@ -1,0 +1,20 @@
+#details-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  width: 40%;
+  min-width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0px 15px rgb(0,0,0,0.2);
+  padding: 20px;
+}
+
+#details-sidebar h3 {
+  margin: 0;
+}
+
+#sidebar-header {
+  display: flex;
+  justify-content: space-between;
+}
