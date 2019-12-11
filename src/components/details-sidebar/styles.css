@@ -6,7 +6,7 @@
   min-width: 400px;
   height: 100vh;
   background: white;
-  box-shadow: -5px 0px 15px rgb(0,0,0,0.2);
+  box-shadow: -2px 0px 5px 0 rgba(33,33,33,0.2);
   padding: 20px;
 }
 
