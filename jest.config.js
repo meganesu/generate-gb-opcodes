@@ -1,6 +1,6 @@
 module.exports = {
-  "moduleNameMapper": {
-    "\\.css$": "identity-obj-proxy"
+  moduleNameMapper: {
+    '\\.css$': 'identity-obj-proxy',
   },
-  "setupFilesAfterEnv": ["./src/helpers/spec-helper.js"]
-}
+  setupFilesAfterEnv: ['./src/helpers/spec-helper.js'],
+};
