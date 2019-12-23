@@ -2,22 +2,3 @@ body {
   width: max-content;
   font-family: sans-serif;
 }
-
-.op-code-table {
-  border-collapse: collapse;
-  background-color: #9F9F9F;
-  width: 100%;
-}
-
-.op-code-table tbody {
-  font-family: monospace;
-}
-
-.op-code-table th {
-  border: 1px solid black;
-}
-
-.op-code-table td {
-  border: 1px solid black;
-  white-space: nowrap;
-}
