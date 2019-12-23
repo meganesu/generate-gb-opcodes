@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import InstructionCell from '../instruction-cell';
 
+import styles from './styles.css';
+
 const OpCodeTable = ({ opCodesGrid, caption, setActiveInstruction }) => (
-  <table className="op-code-table">
+  <table className={styles['op-code-table']}>
     <caption>{caption}</caption>
     <tbody>
       <tr>
