@@ -1,4 +1,6 @@
 body {
-  width: max-content;
   font-family: sans-serif;
+  width: max-content;
+  margin: auto;
+  padding: 0px 10px;
 }
