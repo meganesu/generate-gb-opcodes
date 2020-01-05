@@ -16,8 +16,15 @@ const DetailsSidebar = ({
     },
   },
   hideSidebar,
+  isHidden,
 }) => (
-  <aside id="details-sidebar" className={styles.sidebar}>
+  <aside
+    id="details-sidebar"
+    className={[
+      styles.sidebar,
+      isHidden ? styles.hidden : null,
+    ].join(' ')}
+  >
     <div id="sidebar-header" className={styles.header}>
       <h3 className={styles.title}>
         {mnemonic}
@@ -60,4 +67,5 @@ DetailsSidebar.propTypes = {
     opCode: PropTypes.string,
   }).isRequired,
   hideSidebar: PropTypes.func.isRequired,
+  isHidden: PropTypes.bool.isRequired,
 };

@@ -24,6 +24,7 @@ describe('DetailsSidebar', () => {
       <DetailsSidebar
         activeInstruction={activeInstruction}
         hideSidebar={hideSidebarStub}
+        isHidden={false}
       />,
     );
   });
@@ -46,6 +47,27 @@ describe('DetailsSidebar', () => {
     });
     it('calls hideSidebar from props', () => {
       expect(hideSidebarStub.mock.calls).toHaveLength(1);
+    });
+  });
+
+  describe('isHidden', () => {
+    describe('when isHidden prop is true', () => {
+      const hiddenComponent = mount(
+        <DetailsSidebar
+          activeInstruction={activeInstruction}
+          hideSidebar={hideSidebarStub}
+          isHidden
+        />,
+      );
+      it('adds a .hidden class', () => {
+        expect(hiddenComponent.find('.hidden')).toHaveLength(1);
+      });
+    });
+
+    describe('when isHidden prop is false', () => {
+      it('does not add a .hidden class', () => {
+        expect(component.find('.hidden')).toHaveLength(0);
+      });
     });
   });
 });
