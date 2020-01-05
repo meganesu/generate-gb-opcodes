@@ -42,8 +42,10 @@ describe('App', () => {
     expect(component.find(OpCodeTable)).toHaveLength(2);
   });
 
-  it('does not render DetailsSidebar', () => {
-    expect(component.find(DetailsSidebar)).toHaveLength(0);
+  it('renders DetailsSidebar with isHidden prop set', () => {
+    const detailsSidebar = component.find(DetailsSidebar);
+    expect(detailsSidebar).toHaveLength(1);
+    expect(detailsSidebar.prop('isHidden')).toEqual(true);
   });
 
   describe('when InstructionCell in OpCodeTable is clicked', () => {
@@ -55,9 +57,10 @@ describe('App', () => {
       instructionClicked = instructionCells.first().prop('instruction');
     });
 
-    it('renders the DetailsSidebar', () => {
-      expect(component.find(DetailsSidebar)).toHaveLength(1);
+    it('shows the DetailsSidebar', () => {
+      expect(component.find(DetailsSidebar).prop('isHidden')).toEqual(false);
     });
+
     it('updates the activeInstruction passed to the DetailsSidebar', () => {
       expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClicked);
     });
@@ -67,7 +70,7 @@ describe('App', () => {
         component.find('DetailsSidebar button').simulate('click');
       });
       it('hides the DetailsSidebar', () => {
-        expect(component.find('DetailsSidebar')).toHaveLength(0);
+        expect(component.find('DetailsSidebar').prop('isHidden')).toEqual(true);
       });
     });
   });

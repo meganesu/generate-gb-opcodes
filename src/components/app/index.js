@@ -4,6 +4,19 @@ import DetailsSidebar from '../details-sidebar';
 import { generateAllInstructions } from '../../generators';
 import { createInitialOpCodesGrid, setCellForOpCode } from '../../helpers/grid-helpers';
 
+const emptyInstruction = {
+  mnemonic: '',
+  type: '',
+  flags: {
+    CY: '',
+    H: '',
+    N: '',
+    Z: '',
+  },
+  cycles: '',
+  bytes: -1,
+};
+
 const App = () => {
   const grids = [];
   grids.push(createInitialOpCodesGrid());
@@ -12,7 +25,7 @@ const App = () => {
   const instructions = generateAllInstructions();
 
   const [showSidebar, setShowSidebar] = useState(false);
-  const [activeInstruction, setActiveInstruction] = useState();
+  const [activeInstruction, setActiveInstruction] = useState(emptyInstruction);
 
   const updateSidebar = (instruction) => {
     setActiveInstruction(instruction);
@@ -40,13 +53,11 @@ const App = () => {
           setActiveInstruction={updateSidebar}
         />
       </main>
-      { showSidebar
-        && (
-          <DetailsSidebar
-            activeInstruction={activeInstruction}
-            hideSidebar={() => setShowSidebar(false)}
-          />
-        )}
+      <DetailsSidebar
+        activeInstruction={activeInstruction}
+        hideSidebar={() => setShowSidebar(false)}
+        isHidden={!showSidebar}
+      />
     </>
   );
 };
