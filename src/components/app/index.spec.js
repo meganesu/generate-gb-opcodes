@@ -47,6 +47,7 @@ describe('App', () => {
     expect(detailsSidebar).toHaveLength(1);
     expect(detailsSidebar.prop('isHidden')).toEqual(true);
     expect(detailsSidebar.prop('sidebarRef')).toBeDefined();
+    expect(detailsSidebar.prop('lastClickedInstructionCellRef')).toBeDefined();
   });
 
   describe('when InstructionCell in OpCodeTable is clicked', () => {
@@ -64,6 +65,7 @@ describe('App', () => {
 
     it('updates the activeInstruction passed to the DetailsSidebar', () => {
       expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClicked);
+      // TODO: check that lastClickedInstructionRef also gets updated
     });
 
     it.todo('moves focus to the sidebarRef');
@@ -75,6 +77,8 @@ describe('App', () => {
       it('hides the DetailsSidebar', () => {
         expect(component.find('DetailsSidebar').prop('isHidden')).toEqual(true);
       });
+
+      it.todo('moves focus back to the lastClickedInstructionRef');
     });
   });
 });

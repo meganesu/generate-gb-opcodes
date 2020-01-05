@@ -64,8 +64,14 @@ describe('InstructionCell', () => {
     beforeAll(() => {
       component.find('button').simulate('click');
     });
-    it('calls the click handler from props', () => {
+    it('calls the click handler from props with correct arguments', () => {
       expect(clickStub.mock.calls).toHaveLength(1);
+
+      const firstArg = clickStub.mock.calls[0][0];
+      expect(firstArg).toEqual(instruction);
+
+      const secondArg = clickStub.mock.calls[0][1];
+      expect(secondArg).toBeDefined();
     });
   });
 });

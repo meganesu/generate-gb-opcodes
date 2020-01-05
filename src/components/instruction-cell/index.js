@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './styles.css';
@@ -11,6 +11,8 @@ const InstructionCell = (props) => {
   const h = instruction.flags.H || '-';
   const cy = instruction.flags.CY || '-';
 
+  const buttonRef = useRef(null);
+
   return (
     <td
       className={`${styles.instruction} ${styles[instruction.type]}`}
@@ -18,7 +20,8 @@ const InstructionCell = (props) => {
       <button
         type="button"
         aria-label={`Opcode: 0x${instruction.opCode}; Instruction: ${instruction.mnemonic}`}
-        onClick={() => setActiveInstruction(instruction)}
+        onClick={() => setActiveInstruction(instruction, buttonRef)}
+        ref={buttonRef}
       >
         <span className={styles.mnemonic}>{instruction.mnemonic}</span>
         <span className={styles.bytes}>{instruction.bytes}</span>

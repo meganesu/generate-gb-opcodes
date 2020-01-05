@@ -26,12 +26,19 @@ const App = () => {
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [activeInstruction, setActiveInstruction] = useState(emptyInstruction);
+  const [lastClickedInstructionCell, setLastClickedInstructionCell] = useState(null);
   const sidebarRef = useRef(null);
 
-  const updateSidebar = (instruction) => {
+  const updateSidebar = (instruction, buttonRef) => {
     setActiveInstruction(instruction);
+    setLastClickedInstructionCell(buttonRef);
     setShowSidebar(true);
     sidebarRef.current.focus();
+  };
+
+  const hideSidebar = () => {
+    setShowSidebar(false);
+    lastClickedInstructionCell.current.focus();
   };
 
   // iterate over opcodes to place objects into opCodesGrid
@@ -57,8 +64,9 @@ const App = () => {
       </main>
       <DetailsSidebar
         activeInstruction={activeInstruction}
-        hideSidebar={() => setShowSidebar(false)}
+        hideSidebar={hideSidebar}
         isHidden={!showSidebar}
+        lastClickedInstructionCellRef={lastClickedInstructionCell}
         sidebarRef={sidebarRef}
       />
     </>
