@@ -25,6 +25,7 @@ describe('DetailsSidebar', () => {
         activeInstruction={activeInstruction}
         hideSidebar={hideSidebarStub}
         isHidden={false}
+        sidebarRef={() => {}}
       />,
     );
   });
@@ -57,6 +58,7 @@ describe('DetailsSidebar', () => {
           activeInstruction={activeInstruction}
           hideSidebar={hideSidebarStub}
           isHidden
+          sidebarRef={() => {}}
         />,
       );
       it('adds a .hidden class', () => {

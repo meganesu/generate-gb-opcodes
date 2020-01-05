@@ -42,10 +42,11 @@ describe('App', () => {
     expect(component.find(OpCodeTable)).toHaveLength(2);
   });
 
-  it('renders DetailsSidebar with isHidden prop set', () => {
+  it('renders DetailsSidebar with correct props', () => {
     const detailsSidebar = component.find(DetailsSidebar);
     expect(detailsSidebar).toHaveLength(1);
     expect(detailsSidebar.prop('isHidden')).toEqual(true);
+    expect(detailsSidebar.prop('sidebarRef')).toBeDefined();
   });
 
   describe('when InstructionCell in OpCodeTable is clicked', () => {
@@ -64,6 +65,8 @@ describe('App', () => {
     it('updates the activeInstruction passed to the DetailsSidebar', () => {
       expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClicked);
     });
+
+    it.todo('moves focus to the sidebarRef');
 
     describe('when close sidebar button is clicked', () => {
       beforeAll(() => {

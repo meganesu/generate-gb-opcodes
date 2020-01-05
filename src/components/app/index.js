@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import OpCodeTable from '../op-code-table';
 import DetailsSidebar from '../details-sidebar';
 import { generateAllInstructions } from '../../generators';
@@ -26,10 +26,12 @@ const App = () => {
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [activeInstruction, setActiveInstruction] = useState(emptyInstruction);
+  const sidebarRef = useRef(null);
 
   const updateSidebar = (instruction) => {
     setActiveInstruction(instruction);
     setShowSidebar(true);
+    sidebarRef.current.focus();
   };
 
   // iterate over opcodes to place objects into opCodesGrid
@@ -57,6 +59,7 @@ const App = () => {
         activeInstruction={activeInstruction}
         hideSidebar={() => setShowSidebar(false)}
         isHidden={!showSidebar}
+        sidebarRef={sidebarRef}
       />
     </>
   );

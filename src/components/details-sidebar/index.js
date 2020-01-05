@@ -17,6 +17,7 @@ const DetailsSidebar = ({
   },
   hideSidebar,
   isHidden,
+  sidebarRef,
 }) => (
   <aside
     id="details-sidebar"
@@ -26,7 +27,11 @@ const DetailsSidebar = ({
     ].join(' ')}
   >
     <div id="sidebar-header" className={styles.header}>
-      <h3 className={styles.title}>
+      <h3
+        className={styles.title}
+        ref={sidebarRef}
+        tabIndex={-1}
+      >
         {mnemonic}
       </h3>
       <button
@@ -68,4 +73,10 @@ DetailsSidebar.propTypes = {
   }).isRequired,
   hideSidebar: PropTypes.func.isRequired,
   isHidden: PropTypes.bool.isRequired,
+  sidebarRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({
+      current: PropTypes.instanceOf(Element),
+    }),
+  ]).isRequired,
 };
