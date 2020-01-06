@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   right: 0px;
+  transition: right 0.5s;
   width: 40%;
   min-width: 400px;
   height: 100vh;
@@ -22,4 +23,5 @@
 
 .hidden {
   right: -100%;
+  transition: right 0.7s ease;
 }
