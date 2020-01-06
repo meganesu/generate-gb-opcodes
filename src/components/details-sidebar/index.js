@@ -20,11 +20,12 @@ const DetailsSidebar = ({
   sidebarRef,
 }) => (
   <aside
-    id="details-sidebar"
+    aria-label="Opcode details"
     className={[
       styles.sidebar,
       isHidden ? styles.hidden : null,
     ].join(' ')}
+    id="details-sidebar"
   >
     <div id="sidebar-header" className={styles.header}>
       <h3
