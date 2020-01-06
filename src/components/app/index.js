@@ -55,13 +55,13 @@ const App = () => {
         <h2>8-bit opcodes</h2>
         <OpCodeTable
           opCodesGrid={grids[0]}
-          caption="Game Boy CPU instructions, organized by op code"
+          caption="Game Boy CPU instructions, organized by opcode"
           setActiveInstruction={updateSidebar}
         />
         <h2>16-bit opcodes, where the first 8 bits are 0xCB</h2>
         <OpCodeTable
           opCodesGrid={grids[1]}
-          caption='Game Boy CPU instructions for op codes prefixed by "CB"'
+          caption='Game Boy CPU instructions for opcodes prefixed by "CB"'
           setActiveInstruction={updateSidebar}
         />
       </main>
