@@ -8,8 +8,14 @@ const InstructionCell = (props) => {
 
   const z = instruction.flags.Z || '-';
   const n = instruction.flags.N || '-';
-  const h = instruction.flags.H || '-';
-  const cy = instruction.flags.CY || '-';
+  let h = instruction.flags.H || '-';
+  if (h === '8-bit' || h === '16-bit') {
+    h = 'H';
+  }
+  let cy = instruction.flags.CY || '-';
+  if (cy === '8-bit' || cy === '16-bit') {
+    cy = 'CY';
+  }
 
   const buttonRef = useRef(null);
 

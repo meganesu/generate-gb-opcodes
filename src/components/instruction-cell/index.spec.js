@@ -74,4 +74,37 @@ describe('InstructionCell', () => {
       expect(secondArg).toBeDefined();
     });
   });
+
+  describe('when CY or H flags are "8-bit" or "16-bit"', () => {
+    const instructionWithFlagsWithBitValues = {
+      mnemonic: 'TEST MNEMONIC',
+      type: 'test-instruction-type',
+      flags: {
+        CY: '16-bit',
+        H: '8-bit',
+        N: 'N',
+        Z: 'Z',
+      },
+      cycles: '4',
+      bytes: 3,
+    };
+
+    it('renders flag name instead of "*-bit" string', () => {
+      const componentWithFlagsWithBitValues = mount(
+        <table>
+          <tbody>
+            <tr>
+              <InstructionCell
+                instruction={instructionWithFlagsWithBitValues}
+                setActiveInstruction={clickStub}
+              />
+            </tr>
+          </tbody>
+        </table>,
+      );
+
+      expect(componentWithFlagsWithBitValues.find('.flags').text()).toContain('CY');
+      expect(componentWithFlagsWithBitValues.find('.flags').text()).toContain('H');
+    });
+  });
 });
