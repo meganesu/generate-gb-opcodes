@@ -1,6 +1,8 @@
 .instruction {
   background-color: #BFBFBF;
   text-align: center;
+  width: 100px;
+  box-sizing: border-box;
 }
 
 .instruction button {
