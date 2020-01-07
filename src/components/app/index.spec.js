@@ -51,12 +51,14 @@ describe('App', () => {
   });
 
   describe('when InstructionCell in OpCodeTable is clicked', () => {
-    let instructionClicked;
+    let instructionClickedButton;
+    let instructionClickedProps;
 
     beforeAll(() => {
       const instructionCells = component.find('InstructionCell');
       instructionCells.first().find('button').simulate('click');
-      instructionClicked = instructionCells.first().prop('instruction');
+      instructionClickedButton = instructionCells.first().find('button');
+      instructionClickedProps = instructionCells.first().prop('instruction');
     });
 
     it('shows the DetailsSidebar', () => {
@@ -64,11 +66,14 @@ describe('App', () => {
     });
 
     it('updates the activeInstruction passed to the DetailsSidebar', () => {
-      expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClicked);
+      expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClickedProps);
       // TODO: check that lastClickedInstructionRef also gets updated
     });
 
-    it.todo('moves focus to the sidebarRef');
+    it('moves focus to the sidebarRef', () => {
+      const focusedSidebarHeader = component.find('#sidebar-header h2');
+      expect(focusedSidebarHeader.getDOMNode()).toEqual(document.activeElement);
+    });
 
     describe('when close sidebar button is clicked', () => {
       beforeAll(() => {
@@ -78,7 +83,10 @@ describe('App', () => {
         expect(component.find('DetailsSidebar').prop('isHidden')).toEqual(true);
       });
 
-      it.todo('moves focus back to the lastClickedInstructionRef');
+      it('moves focus back to the lastClickedInstructionRef', () => {
+        const focusedInstruction = instructionClickedButton;
+        expect(focusedInstruction.getDOMNode()).toEqual(document.activeElement);
+      });
     });
   });
 });
