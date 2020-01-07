@@ -17,6 +17,7 @@ describe('DetailsSidebar', () => {
     },
     cycles: '4',
     bytes: 3,
+    description: <p>This is a fake description.</p>,
   };
 
   beforeAll(() => {
@@ -40,6 +41,7 @@ describe('DetailsSidebar', () => {
     expect(sidebarText).toContain('Number of Bytes');
     expect(sidebarText).toContain('Number of Cycles');
     expect(sidebarText).toContain('Flags');
+    expect(sidebarText).toContain(activeInstruction.description.props.children);
   });
 
   describe('when the close button is clicked', () => {

@@ -14,6 +14,7 @@ const DetailsSidebar = ({
       H,
       CY,
     },
+    description,
   },
   hideSidebar,
   isHidden,
@@ -44,7 +45,6 @@ const DetailsSidebar = ({
         X
       </button>
     </div>
-    <section aria-label="description">Description: Coming Soon</section>
     <section>
       <ul>
         <li>{`Opcode: 0x${opCode}`}</li>
@@ -52,6 +52,10 @@ const DetailsSidebar = ({
         <li>{`Number of Cycles: ${cycles}`}</li>
         <li>{`Flags: ${Z || '-'} ${N || '-'} ${H || '-'} ${CY || '-'}`}</li>
       </ul>
+    </section>
+    <section aria-label="description">
+      <h4>Description</h4>
+      {description || <p>Coming Soon</p>}
     </section>
   </aside>
 );
@@ -71,6 +75,7 @@ DetailsSidebar.propTypes = {
       CY: PropTypes.string,
     }),
     opCode: PropTypes.string,
+    description: PropTypes.element,
   }).isRequired,
   hideSidebar: PropTypes.func.isRequired,
   isHidden: PropTypes.bool.isRequired,
