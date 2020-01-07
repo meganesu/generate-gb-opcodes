@@ -1,3 +1,4 @@
+import React from 'react';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
 
@@ -12,6 +13,12 @@ const generate_LD_SP_from_HL = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '11111001';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      Load the contents of register pair HL into the stack pointer SP.
+    </p>
+  );
 
   return instruction;
 };
