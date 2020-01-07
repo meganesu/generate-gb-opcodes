@@ -21,7 +21,7 @@ const generate_LD_r_from_d8 = () => { // eslint-disable-line camelcase
 
       instruction.description = (
         <p>
-          {`Load 8-bit immediate operand d8 into register ${register}.`}
+          {`Load the 8-bit immediate operand d8 into register ${register}.`}
         </p>
       );
 

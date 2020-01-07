@@ -24,7 +24,7 @@ const generate_LD_r_from_rPrime = () => { // eslint-disable-line camelcase
 
           instruction.description = (
             <p>
-              {`Load contents of register ${rPrime} into register ${r}.`}
+              {`Load the contents of register ${rPrime} into register ${r}.`}
             </p>
           );
 

@@ -16,7 +16,7 @@ const generate_LD_A_from_memory_at_DE = () => { // eslint-disable-line camelcase
 
   instruction.description = (
     <p>
-      Load 8-bit contents of memory specified by register pair DE into register A.
+      Load the 8-bit contents of memory specified by register pair DE into register A.
     </p>
   );
 
