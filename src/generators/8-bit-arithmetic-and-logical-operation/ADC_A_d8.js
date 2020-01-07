@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -17,6 +19,8 @@ const generate_ADC_A_d8 = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '11001110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = <p>This is a fake description.</p>;
 
   return instruction;
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
 
@@ -12,6 +13,15 @@ const generate_LD_A_from_memory_at_HL_and_decr_HL = () => { // eslint-disable-li
 
   const opCodeInBinary = '00111010';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      {
+        'Load the contents of memory specified by register pair HL'
+        + ' into register A, and simultaneously decrement the contents of HL.'
+      }
+    </p>
+  );
 
   return instruction;
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
 
@@ -12,6 +13,12 @@ const generate_LD_A_from_memory_at_DE = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '00011010';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      Load 8-bit contents of memory specified by register pair DE into register A.
+    </p>
+  );
 
   return [instruction];
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
 import { instructionTypes, registerBinaryCodes } from '../constants';
@@ -17,6 +18,12 @@ const generate_LD_r_from_d8 = () => { // eslint-disable-line camelcase
 
       const opCodeInBinary = `00${registerBinaryCode}110`;
       instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+      instruction.description = (
+        <p>
+          {`Load 8-bit immediate operand d8 into register ${register}.`}
+        </p>
+      );
 
       instructions.push(instruction);
     });

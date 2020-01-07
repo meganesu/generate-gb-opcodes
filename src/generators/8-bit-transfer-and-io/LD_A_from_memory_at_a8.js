@@ -1,5 +1,7 @@
+import React from 'react';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 import { instructionTypes } from '../constants';
+import { listMemoryFromFF00toFFFF, memoryAtA8Disclaimer } from './constants';
 
 const generate_LD_A_from_memory_at_a8 = () => { // eslint-disable-line camelcase
   const instruction = {};
@@ -12,6 +14,20 @@ const generate_LD_A_from_memory_at_a8 = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '11110000';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <>
+      <p>
+        {
+          'Load into register A the contents of the internal RAM, port register,'
+          + ' or mode register at the address in the range 0xFF00-0xFFFF'
+          + ' specified by the 8-bit immediate operand a8.'
+        }
+      </p>
+      {memoryAtA8Disclaimer}
+      {listMemoryFromFF00toFFFF}
+    </>
+  );
 
   return instruction;
 };
