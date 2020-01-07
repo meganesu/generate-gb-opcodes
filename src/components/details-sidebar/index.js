@@ -29,13 +29,13 @@ const DetailsSidebar = ({
     id="details-sidebar"
   >
     <div id="sidebar-header" className={styles.header}>
-      <h3
+      <h2
         className={styles.title}
         ref={sidebarRef}
         tabIndex={-1}
       >
         {mnemonic}
-      </h3>
+      </h2>
       <button
         id="close-sidebar"
         type="button"
@@ -54,7 +54,7 @@ const DetailsSidebar = ({
       </ul>
     </section>
     <section aria-label="description">
-      <h4>Description</h4>
+      <h3>Description</h3>
       {description || <p>Coming Soon</p>}
     </section>
   </aside>
