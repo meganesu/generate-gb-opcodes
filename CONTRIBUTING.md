@@ -3,6 +3,7 @@
 ## Style guide
 
 * Please use [Conventional Commit](https://www.conventionalcommits.org/) messages.
+    * For the scope, please reference the issue number your commit is addressing. e.g., "feat(#12): add descriptions to instruction generator functions"
 
 ## Testing
 
