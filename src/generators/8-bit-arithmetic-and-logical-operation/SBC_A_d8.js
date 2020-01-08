@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -17,6 +18,13 @@ const generate_SBC_A_d8 = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '11011110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      Subtract the contents of the 8-bit immediate operand d8 and the carry flag CY
+      from the contents of register A, and store the results in register A.
+    </p>
+  );
 
   return instruction;
 };

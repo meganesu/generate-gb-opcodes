@@ -20,7 +20,12 @@ const generate_ADC_A_d8 = () => { // eslint-disable-line camelcase
   const opCodeInBinary = '11001110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
 
-  instruction.description = <p>This is a fake description.</p>;
+  instruction.description = (
+    <p>
+      Add the contents of the 8-bit immediate operand d8 and the CY flag
+      to the contents of register A, and store the results in register A.
+    </p>
+  );
 
   return instruction;
 };

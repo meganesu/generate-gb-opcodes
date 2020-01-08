@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes, registerBinaryCodes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -21,6 +22,15 @@ const generate_SBC_A_r8 = () => { // eslint-disable-line camelcase
 
       const opCodeInBinary = `10011${registerBinaryCode}`;
       instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+      instruction.description = (
+        <p>
+          {
+            `Subtract the contents of register ${register} and the CY flag from the`
+            + ' contents of register A, and store the results in register A.'
+          }
+        </p>
+      );
 
       instructions.push(instruction);
     });

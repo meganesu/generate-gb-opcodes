@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes, registerBinaryCodes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -21,6 +22,15 @@ const generate_AND_r8 = () => { // eslint-disable-line camelcase
 
       const opCodeInBinary = `10100${registerBinaryCode}`;
       instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+      instruction.description = (
+        <p>
+          {
+            `Take the logical AND for each bit of the contents of register ${register}`
+            + ' and the contents of register A, and store the results in register A.'
+          }
+        </p>
+      );
 
       instructions.push(instruction);
     });

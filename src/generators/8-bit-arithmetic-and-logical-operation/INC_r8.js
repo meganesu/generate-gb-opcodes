@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes, registerBinaryCodes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -20,6 +21,12 @@ const generate_INC_r8 = () => { // eslint-disable-line camelcase
 
       const opCodeInBinary = `00${registerBinaryCode}100`;
       instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+      instruction.description = (
+        <p>
+          {`Increment the contents of register ${register} by 1.`}
+        </p>
+      );
 
       instructions.push(instruction);
     });

@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -14,6 +15,14 @@ const generate_AND_memory_at_HL = () => { // eslint-disable-line camelcase
   };
   instruction.cycles = '2';
   instruction.bytes = 1;
+
+  instruction.description = (
+    <p>
+      Take the logical AND for each bit of the contents of memory specified by
+      register pair HL and the contents of register A, and store the results
+      in register A.
+    </p>
+  );
 
   const opCodeInBinary = '10100110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
