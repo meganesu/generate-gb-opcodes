@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -17,6 +18,13 @@ const generate_ADD_SP_s8 = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '11101000';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      Add the contents of the 8-bit signed (2&apos;s complement) immediate operand s8
+      and the stack pointer SP and store the results in SP.
+    </p>
+  );
 
   return instruction;
 };
