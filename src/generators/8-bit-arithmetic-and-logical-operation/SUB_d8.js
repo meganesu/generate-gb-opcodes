@@ -4,7 +4,7 @@ import convertBinaryStringToHexString from '../../helpers/convert-binary-string-
 const generate_SUB_d8 = () => { // eslint-disable-line camelcase
   const instruction = {};
 
-  instruction.mnemonic = 'SUB n8';
+  instruction.mnemonic = 'SUB d8';
   instruction.type = instructionTypes.EIGHT_BIT_ARITHMETIC_AND_LOGICAL_OPERATION;
   instruction.flags = {
     CY: '8-bit',
