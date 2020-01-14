@@ -5,7 +5,7 @@ const generate_RET_condition = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(conditions)
-    .forEach(([condition, conditionBinaryCode]) => {
+    .forEach(([condition, { binaryCode: conditionBinaryCode }]) => {
       const instruction = {};
 
       instruction.mnemonic = `RET ${condition}`;

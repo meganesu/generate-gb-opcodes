@@ -21,8 +21,20 @@ export const registerBinaryCodes = {
 };
 
 export const conditions = {
-  NZ: '00', // !Z
-  Z: '01', // Z
-  NC: '10', // !CY
-  C: '11', // CY
+  NZ: {
+    binaryCode: '00',
+    text: 'the Z flag is 0', // !Z
+  },
+  Z: {
+    binaryCode: '01',
+    text: 'the Z flag is 1', // Z
+  },
+  NC: {
+    binaryCode: '10',
+    text: 'the CY flag is 0', // !CY
+  },
+  C: {
+    binaryCode: '11',
+    text: 'the CY flag is 1', // CY
+  },
 };

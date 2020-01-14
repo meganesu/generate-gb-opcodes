@@ -5,7 +5,7 @@ const generate_CALL_condition_a16 = () => { // eslint-disable-line camelcase
   const instructions = [];
 
   Object.entries(conditions)
-    .forEach(([condition, conditionBinaryCode]) => {
+    .forEach(([condition, { binaryCode: conditionBinaryCode }]) => {
       const instruction = {};
 
       instruction.mnemonic = `CALL ${condition}, a16`;
