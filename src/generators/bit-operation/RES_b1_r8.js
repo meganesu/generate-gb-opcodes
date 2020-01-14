@@ -1,3 +1,4 @@
+import React from 'react';
 import { registerBinaryCodes, instructionTypes } from '../constants';
 import bitBinaryCodes from './constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
@@ -19,6 +20,14 @@ const generate_RES_b1_r8 = () => { // eslint-disable-line camelcase
 
           const opCodeInBinary = `1100101110${bitBinaryCode}${registerBinaryCode}`;
           instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+          instruction.description = (
+            <p>
+              {
+                `Reset bit ${bit} in register ${register} to 0.`
+              }
+            </p>
+          );
 
           instructions.push(instruction);
         });
