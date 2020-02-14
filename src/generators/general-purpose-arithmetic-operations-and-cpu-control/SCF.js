@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -16,6 +17,12 @@ const generate_SCF = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '00110111';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      Set the carry flag CY.
+    </p>
+  );
 
   return instruction;
 };

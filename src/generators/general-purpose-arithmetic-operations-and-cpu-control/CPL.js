@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -15,6 +16,12 @@ const generate_CPL = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '00101111';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      Take the one&apos;s complement (i.e., flip all bits) of the contents of register A.
+    </p>
+  );
 
   return instruction;
 };

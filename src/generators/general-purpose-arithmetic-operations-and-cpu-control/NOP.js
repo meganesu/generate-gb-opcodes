@@ -1,3 +1,4 @@
+import React from 'react';
 import { instructionTypes } from '../constants';
 import convertBinaryStringToHexString from '../../helpers/convert-binary-string-to-hex-string';
 
@@ -12,6 +13,13 @@ const generate_NOP = () => { // eslint-disable-line camelcase
 
   const opCodeInBinary = '00000000';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
+
+  instruction.description = (
+    <p>
+      Only advances the program counter by 1. Performs no other operations
+      that would have an effect.
+    </p>
+  );
 
   return instruction;
 };
