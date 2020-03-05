@@ -4,11 +4,26 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159656850-2"></script>
     <script>
+      // Set to the same value as the web property used on the site
+      var gaProperty = 'UA-159656850-2';
+
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-159656850-2');
+      gtag('config', gaProperty);
+
+      // Disable tracking if the opt-out cookie exists.
+      var disableStr = 'ga-disable-' + gaProperty;
+      if (document.cookie.indexOf(disableStr + '=true') > -1) {
+        window[disableStr] = true;
+      }
+       
+      // Opt-out function
+      function gaOptout() {
+        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+        window[disableStr] = true;
+      }
     </script>
     <!-- end Global site tag -->
     <title>Game Boy CPU Instructions</title>
@@ -20,7 +35,43 @@
     <div id="container"></div>
     <footer>
       <p>View source on <a href="https://github.com/meganesu/generate-gb-op-codes">GitHub</a></p>
-      <p><a href="https://meganesu.github.io/privacy">Privacy Policy</a></p>
+      <details id="privacy-policy" style="max-width: 95vw;">
+        <summary>Privacy Policy</summary>
+        <p>
+          I'm using Google Analytics to collect data about visitors to my site
+          (that's you!). Here's a list of some data that's being collected and how
+          I'm using it:
+        </p>
+        <ul>
+          <li>
+            Page views. I use this data to understand when you're visiting this site.
+          </li>
+          <li>
+            Device. I use this data so that I can make sure my
+            site has a good user experience on whatever platform you might be using.
+          </li>
+          <li>
+            Referrer. I use this data to understand how you got here, so that I can get
+            future content to you more effectively.
+          </li>
+        </ul>
+        <p>
+          Want a more comprehensive list of what data Google Analytics tracks?
+          Check out this article:
+          <a href="http://www.google.com/policies/privacy/partners/">
+            Google Analytics - "How Google uses data when you use our partners'
+            sites or apps"
+          </a>
+        </p>
+        <p>
+          Don't want me to collect this info about you? You can
+          <a href="javascript:gaOptout();" role="button">
+            opt out of Google Analytics tracking</a>. (This will only disable tracking for this particular site.)
+          Or use a browser plugin to disable Google Analytics tracking on all sites, like
+          <a href="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh">
+            Google Analytics Opt-out Add-on (by Google)</a>.
+        </p>
+      </details>
     </footer>
     <script src="main.js"></script>
   </body>
