@@ -7,6 +7,7 @@ import * as generators from '../../generators';
 import * as gridHelpers from '../../helpers/grid-helpers';
 
 describe('App', () => {
+  let container;
   let component;
   let generateAllInstructionsSpy;
   let createInitialOpCodesGridSpy;
@@ -17,7 +18,13 @@ describe('App', () => {
     createInitialOpCodesGridSpy = jest.spyOn(gridHelpers, 'createInitialOpCodesGrid');
     setCellForOpCodeSpy = jest.spyOn(gridHelpers, 'setCellForOpCode');
 
-    component = mount(<App />);
+    container = document.createElement('div');
+    container.id = 'container';
+    document.body.appendChild(container);
+
+    component = mount(<App />, {
+      attachTo: document.querySelector('#container')
+    });
   });
 
   it('mounts', () => {
