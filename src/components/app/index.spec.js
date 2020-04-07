@@ -74,7 +74,6 @@ describe('App', () => {
 
     it('updates the activeInstruction passed to the DetailsSidebar', () => {
       expect(component.find(DetailsSidebar).prop('activeInstruction')).toEqual(instructionClickedProps);
-      // TODO: check that lastClickedInstructionRef also gets updated
     });
 
     it('moves focus to the sidebarRef', () => {
