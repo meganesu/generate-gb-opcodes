@@ -23,7 +23,7 @@ describe('App', () => {
     document.body.appendChild(container);
 
     component = mount(<App />, {
-      attachTo: document.querySelector('#container')
+      attachTo: document.querySelector('#container'),
     });
   });
 
