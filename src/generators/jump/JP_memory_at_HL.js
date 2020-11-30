@@ -5,7 +5,7 @@ import { instructionTypes } from '../constants';
 const generate_JP_memory_at_HL = () => { // eslint-disable-line camelcase
   const instruction = {};
 
-  instruction.mnemonic = 'JP (HL)';
+  instruction.mnemonic = 'JP HL';
   instruction.type = instructionTypes.JUMP;
   instruction.flags = {};
   instruction.cycles = '1';
