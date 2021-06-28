@@ -17,7 +17,7 @@ const generate_BIT_b1_memory_at_HL = () => { // eslint-disable-line camelcase
         N: '0',
         Z: `!(HL)${bit}`,
       };
-      instruction.cycles = '4';
+      instruction.cycles = '3';
       instruction.bytes = 2;
 
       const opCodeInBinary = `1100101101${bitBinaryCode}110`;
