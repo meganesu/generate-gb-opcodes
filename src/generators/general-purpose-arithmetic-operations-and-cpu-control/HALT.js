@@ -41,7 +41,7 @@ const generate_HALT = () => { // eslint-disable-line camelcase
         are pushed to the stack and control jumps to the starting address of the interrupt.
       </p>
       <p>
-        If the RESET terminal goes LOW in HALT moode, the mode becomes that of a normal reset.
+        If the RESET terminal goes LOW in HALT mode, the mode becomes that of a normal reset.
       </p>
     </>
   );
