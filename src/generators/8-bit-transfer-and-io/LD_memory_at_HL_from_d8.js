@@ -9,7 +9,7 @@ const generate_LD_memory_at_HL_from_d8 = () => { // eslint-disable-line camelcas
   instruction.type = instructionTypes.EIGHT_BIT_TRANSFER_AND_IO;
   instruction.flags = {};
   instruction.cycles = '3';
-  instruction.bytes = 1;
+  instruction.bytes = 2;
 
   const opCodeInBinary = '00110110';
   instruction.opCode = convertBinaryStringToHexString(opCodeInBinary);
