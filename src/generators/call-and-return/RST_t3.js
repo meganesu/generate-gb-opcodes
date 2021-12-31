@@ -41,8 +41,8 @@ const generate_RST_t3 = () => { // eslint-disable-line camelcase
         <p>
           {
             'The RST instruction can be used to jump to 1 of 8 addresses. Because all of'
-            + 'the addresses are held in page 0 memory, 0x00 is loaded in the higher-order'
-            + `byte of the PC, and 0x${addrOfTthByteInPage0Hex} is loaded in the lower-order byte.`
+            + ' the addresses are held in page 0 memory, 0x00 is loaded in the higher-order'
+            + ` byte of the PC, and 0x${addrOfTthByteInPage0Hex} is loaded in the lower-order byte.`
           }
         </p>
       </>
