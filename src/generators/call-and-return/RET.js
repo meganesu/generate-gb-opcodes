@@ -18,7 +18,7 @@ const generate_RET = () => { // eslint-disable-line camelcase
     <>
       <p>
         Pop from the memory stack the program counter PC value pushed when the
-        subroutine was called, returning contorl to the source program.
+        subroutine was called, returning control to the source program.
       </p>
       <p>
         The contents of the address specified by the stack pointer SP are loaded
