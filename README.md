@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.com/meganesu/generate-gb-opcodes.svg?branch=master)](https://travis-ci.com/meganesu/generate-gb-opcodes)
 
-This is a bit of a side project that came out of my attempt to make a Game Boy emulator. I was trying to make a table of opcodes for the Game Boy CPU (similar to the one on [pastraiser](http://www.pastraiser.com/cpu/gameboy/gameboy_opcodes.html)), but doing it by hand was quite tedious. So this project is an attempt to dynamically create a similar table!
+This is a side project that came out of my attempt to make a Game Boy emulator. I was trying to make a table of opcodes for the Game Boy CPU (similar to the one on [pastraiser](http://www.pastraiser.com/cpu/gameboy/gameboy_opcodes.html)), but doing it by hand was quite tedious. So this project dynamically creates a similar table!
+
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K1CRQWE)
 
 ## Code Key
 
@@ -14,7 +16,7 @@ This is a bit of a side project that came out of my attempt to make a Game Boy e
 * `a16` - 16-bit immediate address value
 * `s8` - 8-bit signed immediate data value
 
-* Some conditional jump instructions take a different number of cycles depending on whether or not the specified condition is true (e.g., `JP NZ, a16`).
+**Note:** Some conditional jump instructions take a different number of cycles depending on whether or not the specified condition is true (e.g., `JP NZ, a16`).
 
 ## Credits
 
