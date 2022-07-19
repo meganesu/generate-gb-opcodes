@@ -18,6 +18,11 @@ This is a side project that came out of my attempt to make a Game Boy emulator. 
 
 **Note:** Some conditional jump instructions take a different number of cycles depending on whether or not the specified condition is true (e.g., `JP NZ, a16`).
 
+## Additional Resources
+
+- [Gist: Game Boy carry and half-carry flags](https://gist.github.com/meganesu/9e228b6b587decc783aa9be34ae27841)
+- [Twitter thread of resources for building a Game Boy emulator](https://twitter.com/meganesulli/status/1146306829418262528)
+
 ## Credits
 
 ### Game Boy Resources
