@@ -18,7 +18,7 @@ const generate_LD_memory_at_HL_from_A_and_incr_HL = () => { // eslint-disable-li
     <p>
       {
         'Store the contents of register A into the memory location specified'
-        + ' by register pair HL, and simultaneously increment the contents of HL.'
+        + ' by register pair HL, and then increment the contents of HL.'
       }
     </p>
   );
