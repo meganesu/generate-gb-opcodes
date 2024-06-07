@@ -22,7 +22,7 @@ const generate_EI = () => { // eslint-disable-line camelcase
       </p>
       <p>
         The IME flag is reset immediately after an interrupt occurs. The IME flag reset
-        remains in effect if coontrol is returned from the interrupt routine by a RET
+        remains in effect if control is returned from the interrupt routine by a RET
         instruction. However, if an EI instruction is executed in the interrupt routine,
         control is returned with IME = 1.
       </p>
